@@ -4,7 +4,7 @@ import videos
 import notes
 import games
 import notes
-import calculator
+import calculator as calc
 
 def books() :
     return 0
@@ -13,7 +13,7 @@ def videos() :
     return 0
 
 def calculator() :
-    return 0
+    calc.call()
 
 def games() :
     return 0
