@@ -1,0 +1,1 @@
+root.iconbitmap("H:\Mid Sem Project\icon.ico")
