@@ -12,7 +12,7 @@ def phy_playlist():
 
 
 def videos() :
-    yt_logo=ImageTk.PhotoImage(Image.open (r"images\youtube logo.ico"),width=10, height =50)
+    yt_logo=ImageTk.PhotoImage(Image.open (r"images\youtube logo.ico"))
 
     phy_button=Button(text="Physics Lectures", image=yt_logo, compound="top",padx=50,command=phy_playlist)
     phy_button.grid(row=5,column=5)
