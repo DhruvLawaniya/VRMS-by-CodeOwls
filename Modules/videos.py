@@ -10,16 +10,13 @@ def openweb():
     webbrowser.open("https://drive.google.com/file/d/15_PaSoLMEi5GqQrCbvNnZggnDyNEyo-5/view?usp=sharing",new=1)
 
 def videos() :
-    img=ImageTk.PhotoImage(Image.open (r"images\youtube logo.png"))
-    lab=Button(text="bruh",image=img, compound="top")
-    lab.grid(row=5,column=0)
-    lab.image=img
+    yt_logo=ImageTk.PhotoImage(Image.open (r"images\youtube logo.ico"),width=10, height =50)
 
-mainlabel1 = Label(root,pady=0,bg="#344e5c")
-mainlabel2 = Label(root, text="",fg="blue",bg="#344e5c")
+    phy_button=Button(text="Physics Lectures", image=yt_logo, compound="top",padx=50)
+    phy_button.grid(row=5,column=5)
+    phy_button.image=yt_logo
+
 videos_button = Button(root,text="Videos",padx=10,pady=10,fg="blue",bg="#ffffff",command=videos)
-
-#pack in grid
 videos_button.grid(row=1,column=1)
 
 root.mainloop()
