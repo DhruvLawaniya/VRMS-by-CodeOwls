@@ -12,10 +12,9 @@ def openweb():
     webbrowser.open("https://drive.google.com/file/d/1-ozF-lwUS24ZTM3on2FfrJh6uYtiw6ml/view?usp=sharing",new=1)
     #Btn = Button(root, text = "This opens Google",command=openweb)
 def books() :
-    #book1 = Label(root,Image=pdf.png)
-    img = ImageTk.PhotoImage(Image.open(r"images\pdf.ico"))
-    #button1 = Button(root,text = "This opens Google",command=openweb)
-    button2= Button(root,text="hello",compound="top",height=50,width=50,image=img,command=openweb)
+    
+    img = ImageTk.PhotoImage(Image.open(r"images\pdf.ico"),height=50,width=50)
+    button2= Button(root,text="hello",compound="top",padx=50,pady=50,image=img,command=openweb)
     button2.grid(row=4,column=2)
     button2.image=img
     #button1.grid(row=3,column=1)
