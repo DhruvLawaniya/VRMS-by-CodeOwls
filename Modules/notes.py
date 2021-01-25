@@ -22,11 +22,16 @@ def notes() :
 
 def phy():
     Phy_frame = LabelFrame(root, text = "Physics", padx=10,pady=10,bg="#344e5c",width=200,height=200)
-    #Phy_frame.grid(row = 3, column = 2,columnspan = 5,rowspan = 5, padx=5,pady=5)
-    Phy_frame.pack()
-    B = Button(Phy_frame, text = "????")
-    B.grid(row = 0,column=0)
-    
+    Phy_frame.grid(row = 3, column = 2,columnspan = 10,rowspan = 10, padx=5,pady=5)
+
+    yt_logo=ImageTk.PhotoImage(Image.open (r"images\youtube logo.ico"),width=10, height =50)
+    phynotes=Button(Phy_frame,text="Physics Lectures", image = yt_logo, compound="top",padx=50)
+    phynotes.grid(row=0,column=5,padx=10,columnspan=5)
+    phynotes.image=yt_logo
+
+    phytutorials=Button(Phy_frame,text="Physics Lectures", image = yt_logo, compound="top",padx=50)
+    phytutorials.grid(row=0,column=10,padx=10,columnspan=5)
+    phytutorials.image=yt_logo        
     return 0    
 
 def cse():
@@ -47,20 +52,20 @@ root.geometry("1280x600")
 #Basic Label
 mainlabel1 = Label(root,pady=0,bg="#344e5c")
 mainlabel2 = Label(root, text="",fg="red",bg="#344e5c")
-books_button = Button(root,text="Books",padx=10,pady=10,fg="red",bg="#344e5c",borderwidth=0, command=books)
-videos_button = Button(root,text="Videos",padx=10,pady=10,fg="red",bg="#344e5c",borderwidth=0,command=videos)
-games_button = Button(root,text="Games",padx=10,pady=10,fg="red",bg="#344e5c",borderwidth=0,command=games)
-notes_button = Button(root,text="Notes",padx=10,pady=10,fg="red",bg="#344e5c",borderwidth=0,command= notes)
-calculator_button = Button(root,text="Calculator",padx=10,pady=10,fg="red",bg="#344e5c",borderwidth=0,command= calculator)
+booksnotes = Button(root,text="Books",padx=10,pady=10,fg="red",bg="#344e5c",borderwidth=0, command=books)
+videosnotes = Button(root,text="Videos",padx=10,pady=10,fg="red",bg="#344e5c",borderwidth=0,command=videos)
+gamesnotes = Button(root,text="Games",padx=10,pady=10,fg="red",bg="#344e5c",borderwidth=0,command=games)
+notesnotes = Button(root,text="Notes",padx=10,pady=10,fg="red",bg="#344e5c",borderwidth=0,command= notes)
+calculatornotes = Button(root,text="Calculator",padx=10,pady=10,fg="red",bg="#344e5c",borderwidth=0,command= calculator)
 
 #pack in grid
 mainlabel1.grid(row=0,column =0)
 mainlabel2.grid(row=1,column=0)
-books_button.grid(row=1,column=2)
-videos_button.grid(row=1,column=4)
-games_button.grid(row=1,column=6)
-notes_button.grid(row=1,column=8)
-calculator_button.grid(row=1,column=10)
+booksnotes.grid(row=1,column=2)
+videosnotes.grid(row=1,column=4)
+gamesnotes.grid(row=1,column=6)
+notesnotes.grid(row=1,column=8)
+calculatornotes.grid(row=1,column=10)
 
 #
 blankt = []
@@ -71,10 +76,10 @@ for i in range(4):
     j += 2
 
 #Notes Labels
-Phy_button = Button(root,text="EPHY",padx=25.5,pady=10,fg="red",bg="#344e5c",borderwidth=0,command=phy)
-CSE_button = Button(root,text="ECSE",padx=27,pady=10,fg="red",bg="#344e5c",borderwidth=0,command=cse)
-EECE_button = Button(root,text="EECE",padx=27,pady=10,fg="red",bg="#344e5c",borderwidth=0,command = eece)
-EMAT_button = Button(root,text="EMAT",padx=25,pady=10,fg="red",bg="#344e5c",borderwidth=0,command = math)
+Phynotes = Button(root,text="EPHY",padx=25.5,pady=10,fg="red",bg="#344e5c",borderwidth=0,command=phy)
+CSEnotes = Button(root,text="ECSE",padx=27,pady=10,fg="red",bg="#344e5c",borderwidth=0,command=cse)
+EECEnotes = Button(root,text="EECE",padx=27,pady=10,fg="red",bg="#344e5c",borderwidth=0,command = eece)
+EMATnotes = Button(root,text="EMAT",padx=25,pady=10,fg="red",bg="#344e5c",borderwidth=0,command = math)
 
 #Blank space ?
 blank = []
@@ -85,17 +90,17 @@ for i in range(4):
     j += 2
 
 #Pack Notes
-Phy_button.grid(row = 3, column = 1)
-CSE_button.grid(row = 5, column = 1)
-EECE_button.grid(row = 7, column = 1)
-EMAT_button.grid(row = 9, column = 1)
+Phynotes.grid(row = 3, column = 1)
+CSEnotes.grid(row = 5, column = 1)
+EECEnotes.grid(row = 7, column = 1)
+EMATnotes.grid(row = 9, column = 1)
 
 #search box
 
 #search=Entry(root,width=50,bg="red",fg="red",borderwidth=35)
 #search.insert(0,"Search Stuff Here")
-#search_button = Button(root,text="Click here to search",padx=10,pady=5,fg="red",bg="red",command= clickme)
+#searchnotes = Button(root,text="Click here to search",padx=10,pady=5,fg="red",bg="red",command= clickme)
 #search.grid(row=4,column=0)
-#search_button.grid(row=5,column=0)
+#searchnotes.grid(row=5,column=0)
 
 root.mainloop()
