@@ -13,8 +13,9 @@ def openweb():
     #Btn = Button(root, text = "This opens Google",command=openweb)
 def books() :
     
-    img = ImageTk.PhotoImage(Image.open(r"images\pdf.ico"),height=50,width=50)
-    button2= Button(root,text="hello",compound="top",padx=50,pady=50,image=img,command=openweb)
+    
+    img = ImageTk.PhotoImage(Image.open(r"images\pdf.png"),height=50,width=50)
+    button2= Button(root,text="hello",compound="top",image=img,bg="#344e5c",borderwidth=0,command=openweb)
     button2.grid(row=4,column=2)
     button2.image=img
     #button1.grid(row=3,column=1)
