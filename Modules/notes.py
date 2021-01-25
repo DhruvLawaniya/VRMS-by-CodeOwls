@@ -20,7 +20,23 @@ def games() :
 def notes() :
     return 0
 
+def phy():
+    Phy_frame = LabelFrame(root, text = "Physics", padx=10,pady=10,bg="#344e5c",width=200,height=200)
+    #Phy_frame.grid(row = 3, column = 2,columnspan = 5,rowspan = 5, padx=5,pady=5)
+    Phy_frame.pack()
+    B = Button(Phy_frame, text = "????")
+    B.grid(row = 0,column=0)
+    
+    return 0    
 
+def cse():
+    return 0
+
+def eece():
+    return 0
+
+def math():
+    return 0
 
 root = Tk()
 root.title("Learning Management System By Code Owls")
@@ -55,10 +71,10 @@ for i in range(4):
     j += 2
 
 #Notes Labels
-Phy_button = Button(root,text="EPHY",padx=25.5,pady=10,fg="red",bg="#344e5c",borderwidth=0)
-CSE_button = Button(root,text="ECSE",padx=27,pady=10,fg="red",bg="#344e5c",borderwidth=0)
-EECE_button = Button(root,text="EECE",padx=27,pady=10,fg="red",bg="#344e5c",borderwidth=0)
-EMAT_button = Button(root,text="EMAT",padx=25,pady=10,fg="red",bg="#344e5c",borderwidth=0)
+Phy_button = Button(root,text="EPHY",padx=25.5,pady=10,fg="red",bg="#344e5c",borderwidth=0,command=phy)
+CSE_button = Button(root,text="ECSE",padx=27,pady=10,fg="red",bg="#344e5c",borderwidth=0,command=cse)
+EECE_button = Button(root,text="EECE",padx=27,pady=10,fg="red",bg="#344e5c",borderwidth=0,command = eece)
+EMAT_button = Button(root,text="EMAT",padx=25,pady=10,fg="red",bg="#344e5c",borderwidth=0,command = math)
 
 #Blank space ?
 blank = []
