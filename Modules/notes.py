@@ -24,14 +24,14 @@ def phy():
     Phy_frame = LabelFrame(root, text = "Physics", padx=10,pady=10,bg="#344e5c",width=200,height=200)
     Phy_frame.grid(row = 3, column = 2,columnspan = 10,rowspan = 10, padx=5,pady=5)
 
-    yt_logo=ImageTk.PhotoImage(Image.open (r"images\youtube logo.ico"),width=10, height =50)
-    phynotes=Button(Phy_frame,text="Physics Lectures", image = yt_logo, compound="top",padx=50)
+    pdf_logo=ImageTk.PhotoImage(Image.open (r"images\pdf.ico"),width=10, height =50)
+    phynotes=Button(Phy_frame,text="Physics Lectures", image = pdf_logo, compound="top",padx=50)
     phynotes.grid(row=0,column=5,padx=10,columnspan=5)
-    phynotes.image=yt_logo
+    phynotes.image=pdf_logo
 
-    phytutorials=Button(Phy_frame,text="Physics Lectures", image = yt_logo, compound="top",padx=50)
+    phytutorials=Button(Phy_frame,text="Physics Lectures", image = pdf_logo, compound="top",padx=50)
     phytutorials.grid(row=0,column=10,padx=10,columnspan=5)
-    phytutorials.image=yt_logo        
+    phytutorials.image=pdf_logo 
     return 0    
 
 def cse():
