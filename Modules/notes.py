@@ -1,10 +1,15 @@
 from tkinter import *
 from PIL import ImageTk,Image
-import videos
-import games
-import notes
 import calculator as calc
+import links
 
+
+root = Tk()
+root.title("Learning Management System By Code Owls")
+root.configure(bg="#344e5c")
+#root.iconbitmap("H:\Mid Sem Project\icon.ico")
+root.geometry("700x400")
+    
 def books() :
     return 0
 
@@ -20,35 +25,90 @@ def games() :
 def notes() :
     return 0
 
+#icons
+pdf_logo=ImageTk.PhotoImage(Image.open (r"images\pdf.png"),width=10, height =50)
+nb=ImageTk.PhotoImage(Image.open (r"images\notebook.png"),width=10, height =50)
+
+#subject functions
 def phy():
+    def phynote():
+        links.phynote()
+    
+    def phytut():
+        links.phytut()
+
     Phy_frame = LabelFrame(root, text = "Physics", padx=10,pady=10,bg="#344e5c",width=200,height=200)
     Phy_frame.grid(row = 3, column = 2,columnspan = 10,rowspan = 10, padx=5,pady=5)
 
-    pdf_logo=ImageTk.PhotoImage(Image.open (r"images\pdf.ico"),width=10, height =50)
-    phynotes=Button(Phy_frame,text="Physics Lectures", image = pdf_logo, compound="top",padx=50)
+    phynotes=Button(Phy_frame,text="Physics Notes", image = nb, compound="top",padx=50,bg="#344e5c",borderwidth=0,command=phynote)
     phynotes.grid(row=0,column=5,padx=10,columnspan=5)
-    phynotes.image=pdf_logo
+    phynotes.image=nb
 
-    phytutorials=Button(Phy_frame,text="Physics Lectures", image = pdf_logo, compound="top",padx=50)
+    phytutorials=Button(Phy_frame,text="Physics Tutorials", image = pdf_logo, compound="top",padx=50,bg="#344e5c",borderwidth=0,command=phytut)
     phytutorials.grid(row=0,column=10,padx=10,columnspan=5)
     phytutorials.image=pdf_logo 
-    return 0    
+    return 0
 
 def cse():
+    #links
+    def csenote():
+        links.csenote()
+    
+    def csetut():
+        links.csetut()
+    
+    CSE_frame = LabelFrame(root, text = "Computer", padx=10,pady=10,bg="#344e5c",width=200,height=200)
+    CSE_frame.grid(row = 3, column = 2,columnspan = 10,rowspan = 10, padx=5,pady=5)
+
+    CSEnotes=Button(CSE_frame, text="Computer Notes", image = nb, compound="top",padx=50, bg="#344e5c", borderwidth=0,command=csenote)
+    CSEnotes.grid(row=0,column=5,padx=10,columnspan=5)
+    CSEnotes.image=nb
+
+    CSEtutorials=Button(CSE_frame,text="Computer Tutorials", image = pdf_logo, compound="top",padx=50,bg="#344e5c",borderwidth=0,command=csetut)
+    CSEtutorials.grid(row=0,column=10,padx=10,columnspan=5)
+    CSEtutorials.image=pdf_logo
     return 0
 
 def eece():
+    def eecenote():
+        links.eecenote()
+    
+    def eecetut():
+        links.eecetut()
+
+    eece_frame = LabelFrame(root, text = "EECE", padx=10,pady=10,bg="#344e5c",width=200,height=200)
+    eece_frame.grid(row = 3, column = 2,columnspan = 10,rowspan = 10, padx=5,pady=5)
+
+    eecenotes=Button(eece_frame,text="EECE Notes", image = nb, compound="top",padx=50,bg="#344e5c",borderwidth=0,command=eecenote)
+    eecenotes.grid(row=0,column=5,padx=10,columnspan=5)
+    eecenotes.image=nb
+
+    eecetutorials=Button(eece_frame,text="EECE Tutorials", image = pdf_logo, compound="top",padx=50,bg="#344e5c",borderwidth=0,command=eecetut)
+    eecetutorials.grid(row=0,column=10,padx=10,columnspan=5)
+    eecetutorials.image=pdf_logo
     return 0
 
 def math():
+    def mathnote():
+        links.mathnote()
+    
+    def mathtut():
+        links.mathtut()
+
+    mat_frame = LabelFrame(root, text = "Mathematics", padx=10,pady=10,bg="#344e5c",width=200,height=200)
+    mat_frame.grid(row = 3, column = 2,columnspan = 10,rowspan = 10, padx=5,pady=5)
+
+    matnotes=Button(mat_frame,text="Math Notes", image = nb, compound="top",padx=50,bg="#344e5c",borderwidth=0,command=mathnote)
+    matnotes.grid(row=0,column=5,padx=10,columnspan=5)
+    matnotes.image=nb
+
+    mattutorials=Button(mat_frame,text="Math Tutorials", image = pdf_logo, compound="top",padx=50,bg="#344e5c",borderwidth=0,command=mathtut)
+    mattutorials.grid(row=0,column=10,padx=10,columnspan=5)
+    mattutorials.image=pdf_logo
+    
+
     return 0
 
-root = Tk()
-root.title("Learning Management System By Code Owls")
-root.configure(bg="#344e5c")
-#root.iconbitmap("H:\Mid Sem Project\icon.ico")
-root.geometry("1280x600")
-    
 #Basic Label
 mainlabel1 = Label(root,pady=0,bg="#344e5c")
 mainlabel2 = Label(root, text="",fg="red",bg="#344e5c")
