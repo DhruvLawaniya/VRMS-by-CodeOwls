@@ -1,29 +1,19 @@
 from tkinter import *
 from PIL import ImageTk,Image
-import webbrowser
-root = Tk()
-root.title("Learning Management System By Code Owls")
-#root.configure(bg="#344e5c")
-#root.iconbitmap("H:\Mid Sem Project\icon.ico")
-root.geometry("1280x600")
-url = "https://drive.google.com/file/d/1-ozF-lwUS24ZTM3on2FfrJh6uYtiw6ml/view?usp=sharing"
-new = 1
-def openweb():
-    webbrowser.open(url,new=new)
-    #Btn = Button(root, text = "This opens Google",command=openweb)
-def books() :
-    #book1 = Label(root,Image=pdf.png)
-    img = ImageTk.PhotoImage(file=r"modules/pdf.png")
-    button1 = Button(root,text = "This opens Google",command=openweb)
-    #button1.config(image=img)
-    button1.grid(row=3,column=1)
+import videos
+import notes
+import games
+import notes
+import calculator as calc
 
+def books() :
+    return 0
 
 def videos() :
     return 0
 
 def calculator() :
-    return 0
+    calc.call()
 
 def games() :
     return 0
@@ -33,6 +23,11 @@ def notes() :
 
 
 
+root = Tk()
+root.title("Learning Management System By Code Owls")
+root.configure(bg="#344e5c")
+#root.iconbitmap("H:\Mid Sem Project\icon.ico")
+root.geometry("1280x600")
     
 #Basic Label
 mainlabel1 = Label(root,pady=0,bg="#344e5c")
