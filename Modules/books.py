@@ -11,9 +11,7 @@ new = 1
 def openweb():
     webbrowser.open("https://drive.google.com/file/d/1-ozF-lwUS24ZTM3on2FfrJh6uYtiw6ml/view?usp=sharing",new=1)
     #Btn = Button(root, text = "This opens Google",command=openweb)
-def books() :
-    
-    
+def books() :    
     img = ImageTk.PhotoImage(Image.open(r"images\pdf.png"),height=50,width=50)
     button2= Button(root,text="hello",compound="top",image=img,bg="#344e5c",borderwidth=0,command=openweb)
     button2.grid(row=4,column=2)
