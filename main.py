@@ -1,10 +1,10 @@
 from tkinter import *
 from PIL import ImageTk,Image
-import videos
-import notes
-import games
-import notes
-import calculator as calc
+#import videos
+#import notes
+#import games
+#import notes
+#import calculator as calc
 
 def books() :
     return 0
@@ -13,7 +13,8 @@ def videos() :
     return 0
 
 def calculator() :
-    calc.call()
+    #calc.call()
+    return 0
 
 def games() :
     return 0
@@ -27,7 +28,7 @@ root = Tk()
 root.title("Learning Management System By Code Owls")
 root.configure(bg="#344e5c")
 root.iconbitmap("H:\Mid Sem Project\icon.ico")
-root.geometry("1280x600")
+root.geometry("1920x1080")
     
 #Basic Label
 mainlabel1 = Label(root,pady=0,bg="#344e5c")
