@@ -7,8 +7,7 @@ import links
 root = Tk()
 root.title("Learning Management System By Code Owls")
 root.configure(bg="#344e5c")
-#root.iconbitmap("H:\Mid Sem Project\icon.ico")
-root.geometry("700x400")
+root.geometry("1000x500")
     
 def books() :
     return 0
@@ -23,7 +22,6 @@ def games() :
     return 0
 
 def note() :
-    mainloop()
     return 0
 
 #icons
@@ -132,7 +130,7 @@ calculatornotes.grid(row=1,column=10)
 blankt = []
 j = 3
 for i in range(4):
-    blankt.append(Label(root, text="        ",fg="red",bg="#344e5c"))
+    blankt.append(Label(root, text="     can't see me   ",fg="#344e5c",bg="#344e5c"))
     blankt[i].grid(row = 1, column=j)
     j += 2
 
