@@ -9,7 +9,7 @@ root.geometry("1280x600")
 url = "https://drive.google.com/file/d/1-ozF-lwUS24ZTM3on2FfrJh6uYtiw6ml/view?usp=sharing"
 new = 1
 def openweb():
-    webbrowser.open(url,new=new)
+    webbrowser.open("https://drive.google.com/file/d/1-ozF-lwUS24ZTM3on2FfrJh6uYtiw6ml/view?usp=sharing",new=1)
     #Btn = Button(root, text = "This opens Google",command=openweb)
 def books() :
     #book1 = Label(root,Image=pdf.png)
