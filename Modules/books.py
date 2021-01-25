@@ -3,7 +3,7 @@ from PIL import ImageTk,Image
 import webbrowser
 root = Tk()
 root.title("Learning Management System By Code Owls")
-root.configure(bg="#344e5c")
+#root.configure(bg="#344e5c")
 #root.iconbitmap("H:\Mid Sem Project\icon.ico")
 root.geometry("1280x600")
 url = "https://drive.google.com/file/d/1-ozF-lwUS24ZTM3on2FfrJh6uYtiw6ml/view?usp=sharing"
@@ -13,12 +13,18 @@ def openweb():
     #Btn = Button(root, text = "This opens Google",command=openweb)
 def books() :
     #book1 = Label(root,Image=pdf.png)
-    img = ImageTk.PhotoImage(Image.open("modules/images/pdf.png"))
+<<<<<<< HEAD
+    img = ImageTk.PhotoImage(Image.open("modules/images/pdf.ico"))
     #button1 = Button(root,text = "This opens Google",command=openweb)
     button2= Button(root,text="hello",compound="top",image=img,command=openweb)
     button2.grid(row=4,column=2)
     button2.image=img
 
+=======
+    img = ImageTk.PhotoImage(file=r"modules/pdf.png")
+    button1 = Button(root,text = "This opens Google",command=openweb)
+    #button1.config(image=img)
+>>>>>>> 1c51036010888b4900c60485736bef051b9588da
     button1.grid(row=3,column=1)
 
 
