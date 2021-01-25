@@ -10,7 +10,7 @@ def openweb():
     webbrowser.open("https://drive.google.com/file/d/15_PaSoLMEi5GqQrCbvNnZggnDyNEyo-5/view?usp=sharing",new=1)
 
 def videos() :
-    img=ImageTk.PhotoImage(Image.open (r"D:\\Uni\Semester 1\ECSE105L\Project\SemProject\Code-Owls-First-Sem-Project\Modules\Images\h.jpg"))
+    img=ImageTk.PhotoImage(Image.open (r"images\youtube logo.png"))
     lab=Button(text="bruh",image=img, compound="top")
     lab.grid(row=5,column=0)
     lab.image=img
