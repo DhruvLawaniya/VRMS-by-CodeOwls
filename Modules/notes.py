@@ -22,7 +22,8 @@ def calculator() :
 def games() :
     return 0
 
-def notes() :
+def note() :
+    mainloop()
     return 0
 
 #icons
@@ -115,7 +116,7 @@ mainlabel2 = Label(root, text="",fg="red",bg="#344e5c")
 booksnotes = Button(root,text="Books",padx=10,pady=10,fg="red",bg="#344e5c",borderwidth=0, command=books)
 videosnotes = Button(root,text="Videos",padx=10,pady=10,fg="red",bg="#344e5c",borderwidth=0,command=videos)
 gamesnotes = Button(root,text="Games",padx=10,pady=10,fg="red",bg="#344e5c",borderwidth=0,command=games)
-notesnotes = Button(root,text="Notes",padx=10,pady=10,fg="red",bg="#344e5c",borderwidth=0,command= notes)
+notesnotes = Button(root,text="Notes",padx=10,pady=10,fg="red",bg="#344e5c",borderwidth=0,command= note)
 calculatornotes = Button(root,text="Calculator",padx=10,pady=10,fg="red",bg="#344e5c",borderwidth=0,command= calculator)
 
 #pack in grid
