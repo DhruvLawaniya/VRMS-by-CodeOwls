@@ -10,9 +10,25 @@ root.geometry("1920x1080")
    
 def books() :  
     def ecepush():
+       #functions
+       def openwebbook1():
+         webbrowser.open(urlbook1,new)
+       def openwebbook2():
+         webbrowser.open(urlbook2,new)
+       new=1
        BFrame_Right = LabelFrame(root, padx=10,pady=10,bg="#344e5c",width=200,height=200)
        BFrame_Right.grid(row=2,column=1)  
        #list ece books and setup their info here itself
+       urlbook1 = "https://drive.google.com/file/d/1BfJUZc6QZmCjBllSsvdWYu3kMHJLJuFj/view?usp=sharing"
+       
+       urlbook2 = "https://drive.google.com/file/d/1-ozF-lwUS24ZTM3on2FfrJh6uYtiw6ml/view?usp=sharing"
+       urlbook3 = "https://drive.google.com/file/d/1-ozF-lwUS24ZTM3on2FfrJh6uYtiw6ml/view?usp=sharing"
+       book1= Button(BFrame_Right,text="Introductory Circuit Analysis",compound="top",image=img,bg="#344e5c",borderwidth=0,command=openwebbook1)
+       book1.grid(row=4,column=2)
+       book2= Button(BFrame_Right,text="Electronic Devices And Circuits",compound="top",image=img,bg="#344e5c",borderwidth=0,command=openwebbook2)
+       book2.grid(row=4,column=3)
+
+
     def phypush():
        BFrame_Right = LabelFrame(root, padx=10,pady=10,bg="#344e5c",width=200,height=200)
        BFrame_Right.grid(row=2,column=1)
@@ -22,13 +38,13 @@ def books() :
     def csepush():
        BFrame_Right = LabelFrame(root, padx=10,pady=10,bg="#344e5c",width=200,height=200)
        BFrame_Right.grid(row=2,column=1)
-        
+    img = ImageTk.PhotoImage(Image.open(r"images\pdf.png"),height=50,width=50)    
     BFrame_left = LabelFrame(root, padx=10,pady=10,bg="#344e5c",width=200,height=200)
     #my button definitions
     ecebutton=Button(BFrame_left,text="Ece ",command=ecepush)
-    phybutton=Button(BFrame_left,text="Phy ")
-    mathbutton=Button(BFrame_left,text="Maths ")
-    csebutton=Button(BFrame_left,text="CSE ")
+    phybutton=Button(BFrame_left,text="Phy ",command=phypush)
+    mathbutton=Button(BFrame_left,text="Maths ",command=mathpush)
+    csebutton=Button(BFrame_left,text="CSE ",command=csepush)
     
     #my button grids
     BFrame_left.grid(row=2,column=0)
