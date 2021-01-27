@@ -2,7 +2,7 @@ from tkinter import *
 from PIL import ImageTk,Image
 import Modules.calculator as calc
 import Modules.notes as n
-
+import Modules.academic as aca
 import Modules.books as b
 import Modules.videos as v
 
@@ -20,6 +20,8 @@ def books() :
 
 def videos() :
     v.videos(root)
+def academic() :
+    aca.academic(root)
 
 def calculator() :
     calc.call()
@@ -90,16 +92,8 @@ videosnotes = Button(root,text="Videos",padx=10,pady=10,fg="white",bg="#1d2125",
 gamesnotes = Button(root,text="Games",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1,command=games)
 notesnotes = Button(root,text="Notes",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1,command= note)
 calculatornotes = Button(root,text="Calculator",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1,command= calculator)
+Academic = Button(root,text="Academic",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1,command= academic)
 
-#blank space
-#blankt = []
-#j = 3
-#for i in range(4):
-#    blankt.append(Label(root, text="     can't see me   ",fg="#1d2125",bg="#1d2125"))
-#    blankt[i].grid(row = 1, column=j)
-#    j += 2
-
-#pack in grid
 homebutton.grid(row=0,column=0)
 mainlabel1.grid(row=0,column =0)
 booksnotes.grid(row=0,column=1)
@@ -107,5 +101,5 @@ videosnotes.grid(row=0,column=2)
 gamesnotes.grid(row=0,column=3)
 notesnotes.grid(row=0,column=4)
 calculatornotes.grid(row=0,column=5)
-
+Academic.grid(row=0,column=6)
 root.mainloop()

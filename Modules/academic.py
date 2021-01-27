@@ -1,13 +1,9 @@
 from tkinter import *
 from PIL import ImageTk,Image
 import webbrowser
-root = Tk()
-root.title("Learning Management System By Code Owls")
-root.configure(bg="#344e5c")
-root.geometry("1920x1080")
 
    
-def academic() :  
+def academic(root) :  
     def timetable():
        #functions
        def openwebbook1():
@@ -66,8 +62,8 @@ def academic() :
     #my button definitions
     timetablebutton=Button(BFrame_left,text="Ece ",command=timetable)
     marksbutton=Button(BFrame_left,text="Phy ",command=marks)
-    feesbutton=Button(BFrame_left,text="Maths ",command=fees)
-    cirriculumbutton=Button(BFrame_left,text="CSE ",command=cirriculum)
+    feesbutton=Button(BFrame_left,text="Fees",command=fees)
+    cirriculumbutton=Button(BFrame_left,text="curriculum",command=cirriculum)
     
     #my button grids
     BFrame_left.grid(row=2,column=0)
