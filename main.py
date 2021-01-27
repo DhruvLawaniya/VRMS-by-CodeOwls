@@ -2,7 +2,7 @@ from tkinter import *
 from PIL import ImageTk,Image
 import Modules.calculator as calc
 import Modules.notes as n
-#import Modules.links
+
 import Modules.books as b
 import Modules.videos as v
 
@@ -92,20 +92,20 @@ notesnotes = Button(root,text="Notes",padx=10,pady=10,fg="white",bg="#1d2125",bo
 calculatornotes = Button(root,text="Calculator",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1,command= calculator)
 
 #blank space
-blankt = []
-j = 3
-for i in range(4):
-    blankt.append(Label(root, text="     can't see me   ",fg="#1d2125",bg="#1d2125"))
-    blankt[i].grid(row = 1, column=j)
-    j += 2
+#blankt = []
+#j = 3
+#for i in range(4):
+#    blankt.append(Label(root, text="     can't see me   ",fg="#1d2125",bg="#1d2125"))
+#    blankt[i].grid(row = 1, column=j)
+#    j += 2
 
 #pack in grid
-homebutton.grid(row=1,column=0)
+homebutton.grid(row=0,column=0)
 mainlabel1.grid(row=0,column =0)
-booksnotes.grid(row=1,column=2)
-videosnotes.grid(row=1,column=4)
-gamesnotes.grid(row=1,column=6)
-notesnotes.grid(row=1,column=8)
-calculatornotes.grid(row=1,column=10)
+booksnotes.grid(row=0,column=1)
+videosnotes.grid(row=0,column=2)
+gamesnotes.grid(row=0,column=3)
+notesnotes.grid(row=0,column=4)
+calculatornotes.grid(row=0,column=5)
 
 root.mainloop()
