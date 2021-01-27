@@ -8,7 +8,7 @@ import Modules.videos as v
 
 root = Tk()
 root.title("Learning Management System By Code Owls")
-root.configure(bg="#344e5c")
+root.configure(bg="#24292e")
 root.geometry("1000x500")
 
 def home():
@@ -28,13 +28,13 @@ def games() :
     return 0
 
 def note():
-    LeftFrame = LabelFrame(root,bg="#344e5c",pady=28,borderwidth=0)
+    LeftFrame = LabelFrame(root,bg="#1d2125",pady=28,borderwidth=0)
     LeftFrame.grid(row = 3, column = 0,rowspan=10,padx=10)
 
-    Phynotes = Button(LeftFrame,text="EPHY",padx=10,pady=10,fg="red",bg="#344e5c",borderwidth=0,command=phy)
-    CSEnotes = Button(LeftFrame,text="ECSE",padx=10,pady=10,fg="red",bg="#344e5c",borderwidth=0,command=cse)
-    EECEnotes = Button(LeftFrame,text="EECE",padx=10,pady=10,fg="red",bg="#344e5c",borderwidth=0,command = eece)
-    EMATnotes = Button(LeftFrame,text="EMAT",padx=10,pady=10,fg="red",bg="#344e5c",borderwidth=0,command = math)
+    Phynotes = Button(LeftFrame,text="EPHY",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=0,command=phy)
+    CSEnotes = Button(LeftFrame,text="ECSE",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=0,command=cse)
+    EECEnotes = Button(LeftFrame,text="EECE",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=0,command = eece)
+    EMATnotes = Button(LeftFrame,text="EMAT",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=0,command = math)
 
     Phynotes.grid(row = 0, column = 1)
     CSEnotes.grid(row = 2, column = 1)
@@ -45,7 +45,7 @@ def note():
     blank = []
     j = 1
     for i in range(4):
-        blank.append(Label(LeftFrame, text=" Trying to make it long ",fg="#344e5c",bg="#344e5c"))
+        blank.append(Label(LeftFrame, text=" Trying to make it long ",fg="#1d2125",bg="#1d2125"))
         blank[i].grid(row = j, column=1)
         j += 2
 
@@ -64,15 +64,15 @@ def cse():
     n.cse(root)
 
 
-Main = LabelFrame(root, padx=200,pady=20,bg="#344e5c",width=200,height=200)
+Main = LabelFrame(root, padx=200,pady=20,bg="#1d2125",width=200,height=200)
 Main.grid(row = 3, column = 2,columnspan = 10,rowspan = 10, padx=5,pady=5)
 
-MainLeft = LabelFrame(root,bg="#344e5c",pady=28,borderwidth=0)
+MainLeft = LabelFrame(root,bg="#1d2125",pady=28,borderwidth=0)
 MainLeft.grid(row = 3, column = 0,rowspan=10,padx=10)
 
 blank = []
 for i in range(8):
-    blank.append(Label(MainLeft, text=" Trying to make it long ",fg="#344e5c",bg="#344e5c"))
+    blank.append(Label(MainLeft, text=" Trying to make it long ",fg="#1d2125",bg="#1d2125"))
     blank[i].grid(row = i, column=1)
 
 
@@ -82,20 +82,20 @@ main.grid(row=0,column=0)
 
 
 #Basic Label
-mainlabel1 = Label(root,pady=0,bg="#344e5c")
-mainlabel2 = Label(root, text="",fg="red",bg="#344e5c")
-homebutton = Button(root,text="HOME",padx=10,pady=10,fg="red",bg="#344e5c",borderwidth=0, command=home)
-booksnotes = Button(root,text="Books",padx=10,pady=10,fg="red",bg="#344e5c",borderwidth=0, command=books)
-videosnotes = Button(root,text="Videos",padx=10,pady=10,fg="red",bg="#344e5c",borderwidth=0,command=videos)
-gamesnotes = Button(root,text="Games",padx=10,pady=10,fg="red",bg="#344e5c",borderwidth=0,command=games)
-notesnotes = Button(root,text="Notes",padx=10,pady=10,fg="red",bg="#344e5c",borderwidth=0,command= note)
-calculatornotes = Button(root,text="Calculator",padx=10,pady=10,fg="red",bg="#344e5c",borderwidth=0,command= calculator)
+mainlabel1 = Label(root,pady=0,bg="#1d2125")
+mainlabel2 = Label(root, text="",fg="white",bg="#1d2125")
+homebutton = Button(root,text="HOME",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=0, command=home)
+booksnotes = Button(root,text="Books",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=0, command=books)
+videosnotes = Button(root,text="Videos",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=0,command=videos)
+gamesnotes = Button(root,text="Games",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=0,command=games)
+notesnotes = Button(root,text="Notes",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=0,command= note)
+calculatornotes = Button(root,text="Calculator",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=0,command= calculator)
 
 #blank space
 blankt = []
 j = 3
 for i in range(4):
-    blankt.append(Label(root, text="     can't see me   ",fg="#344e5c",bg="#344e5c"))
+    blankt.append(Label(root, text="     can't see me   ",fg="#1d2125",bg="#1d2125"))
     blankt[i].grid(row = 1, column=j)
     j += 2
 
