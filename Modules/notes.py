@@ -1,63 +1,88 @@
 from tkinter import *
 from PIL import ImageTk,Image
-import calculator as calc
-import links
+  
+import webbrowser
 
-
-root = Tk()
-root.title("Learning Management System By Code Owls")
-root.configure(bg="#344e5c")
-root.geometry("1000x500")
-    
-def books() :
+def csenote():
+    webbrowser.open("https://drive.google.com/drive/folders/1WjknjKJ81ajNQZpb7tKUy5ohMxGJWz30")
     return 0
 
-def videos() :
+def csetut():
+    webbrowser.open("https://drive.google.com/drive/folders/1uNngYCa-L4JyXOwR14lT7Yi0BCMDXiNt")
     return 0
 
-def calculator() :
-    calc.call()
-
-def games() :
+def eecenote():
+    webbrowser.open("https://drive.google.com/drive/folders/1YSPKLGk-Q2Ml1Lr3rZIVedcgj65IKp5z")
     return 0
 
-def note() :
+def eecetut():
+    webbrowser.open("https://drive.google.com/drive/folders/1O2riFGPlZuxZ8di4nCl5QG2jM46Rwd-D")
     return 0
 
-#icons
-pdf_logo=ImageTk.PhotoImage(Image.open (r"images\pdf.png"),width=10, height =50)
-nb=ImageTk.PhotoImage(Image.open (r"images\notebook.png"),width=10, height =50)
+def mathnote():
+    webbrowser.open("https://drive.google.com/drive/folders/1PVM_4r4bBMDs1nzJsQEBVuL--hxHOtvw")
+    return 0
 
-#subject functions
-def phy():
-    def phynote():
-        links.phynote()
-    
-    def phytut():
-        links.phytut()
+def mathtut():
+    webbrowser.open("https://drive.google.com/drive/folders/1cwessWTlenOgAD3lClxvP2Bov61FULAO")
+    return 0
 
-    Phy_frame = LabelFrame(root, text = "Physics", padx=10,pady=10,bg="#344e5c",width=200,height=200)
-    Phy_frame.grid(row = 3, column = 2,columnspan = 10,rowspan = 10, padx=5,pady=5)
+def phynote():
+    webbrowser.open("https://drive.google.com/drive/folders/1Bch6DpcM1T_YesopG06C_RL9Yd-cN_UH")
+    return 0
 
-    phynotes=Button(Phy_frame,text="Physics Notes", image = nb, compound="top",padx=50,bg="#344e5c",borderwidth=0,command=phynote)
+def phytut():
+    webbrowser.open("https://drive.google.com/drive/folders/1YO43v74zG0hD2FFtEjusOGOl3thlkOwV")
+    return 0
+
+def phys(root):
+    pdf_logo=ImageTk.PhotoImage(Image.open (r"images\pdf.png"),width=10, height =50)
+    nb=ImageTk.PhotoImage(Image.open (r"images\notebook.png"),width=10, height =50)
+
+    Phyframe = LabelFrame(root, padx=80,pady=75,bg="#344e5c",width=200,height=200)
+    Phyframe.grid(row = 3, column = 2,columnspan = 10,rowspan = 15, padx=5,pady=5)
+
+
+    phynotes=Button(Phyframe,text="Physics Notes", image = nb, compound="top",padx=50,bg="#344e5c",borderwidth=0,command=phynote)
     phynotes.grid(row=0,column=5,padx=10,columnspan=5)
     phynotes.image=nb
 
-    phytutorials=Button(Phy_frame,text="Physics Tutorials", image = pdf_logo, compound="top",padx=50,bg="#344e5c",borderwidth=0,command=phytut)
+    phytutorials=Button(Phyframe,text="Physics Tutorials", image = pdf_logo, compound="top",padx=50,bg="#344e5c",borderwidth=0,command=phytut)
     phytutorials.grid(row=0,column=10,padx=10,columnspan=5)
-    phytutorials.image=pdf_logo 
+    phytutorials.image=pdf_logo
+
+    Phyframe.lift()
+
     return 0
 
-def cse():
-    #links
-    def csenote():
-        links.csenote()
+def eece(root):
+    pdf_logo=ImageTk.PhotoImage(Image.open (r"images\pdf.png"),width=10, height =50)
+    nb=ImageTk.PhotoImage(Image.open (r"images\notebook.png"),width=10, height =50)
+
+  
+
+    eece_frame = LabelFrame(root, padx=80,pady=75,bg="#344e5c",width=200,height=200)
+    eece_frame.grid(row = 3, column = 2,columnspan = 10,rowspan = 15, padx=5,pady=5)
     
-    def csetut():
-        links.csetut()
+    eecenotes=Button(eece_frame,text="EECE Notes", image = nb, compound="top",padx=50,bg="#344e5c",borderwidth=0,command=eecenote)
+    eecenotes.grid(row=0,column=5,padx=10,columnspan=5)
+    eecenotes.image=nb
+
+    eecetutorials=Button(eece_frame,text="EECE Tutorials", image = pdf_logo, compound="top",padx=50,bg="#344e5c",borderwidth=0,command=eecetut)
+    eecetutorials.grid(row=0,column=10,padx=10,columnspan=5)
+    eecetutorials.image=pdf_logo
+
+    eece_frame.lift()
+    return 0
+
+def cse(root):
+    pdf_logo=ImageTk.PhotoImage(Image.open (r"images\pdf.png"),width=10, height =50)
+    nb=ImageTk.PhotoImage(Image.open (r"images\notebook.png"),width=10, height =50)
+
+   
+    CSE_frame = LabelFrame(root, padx=80,pady=75,bg="#344e5c",width=200,height=200)
+    CSE_frame.grid(row = 3, column = 2,columnspan = 10,rowspan = 15, padx=5,pady=5)
     
-    CSE_frame = LabelFrame(root, text = "Computer", padx=10,pady=10,bg="#344e5c",width=200,height=200)
-    CSE_frame.grid(row = 3, column = 2,columnspan = 10,rowspan = 10, padx=5,pady=5)
 
     CSEnotes=Button(CSE_frame, text="Computer Notes", image = nb, compound="top",padx=50, bg="#344e5c", borderwidth=0,command=csenote)
     CSEnotes.grid(row=0,column=5,padx=10,columnspan=5)
@@ -68,35 +93,14 @@ def cse():
     CSEtutorials.image=pdf_logo
     return 0
 
-def eece():
-    def eecenote():
-        links.eecenote()
+def math(root):
+    pdf_logo=ImageTk.PhotoImage(Image.open (r"images\pdf.png"),width=10, height =50)
+    nb=ImageTk.PhotoImage(Image.open (r"images\notebook.png"),width=10, height =50)
     
-    def eecetut():
-        links.eecetut()
-
-    eece_frame = LabelFrame(root, text = "EECE", padx=10,pady=10,bg="#344e5c",width=200,height=200)
-    eece_frame.grid(row = 3, column = 2,columnspan = 10,rowspan = 10, padx=5,pady=5)
-
-    eecenotes=Button(eece_frame,text="EECE Notes", image = nb, compound="top",padx=50,bg="#344e5c",borderwidth=0,command=eecenote)
-    eecenotes.grid(row=0,column=5,padx=10,columnspan=5)
-    eecenotes.image=nb
-
-    eecetutorials=Button(eece_frame,text="EECE Tutorials", image = pdf_logo, compound="top",padx=50,bg="#344e5c",borderwidth=0,command=eecetut)
-    eecetutorials.grid(row=0,column=10,padx=10,columnspan=5)
-    eecetutorials.image=pdf_logo
-    return 0
-
-def math():
-    def mathnote():
-        links.mathnote()
     
-    def mathtut():
-        links.mathtut()
 
-    mat_frame = LabelFrame(root, text = "Mathematics", padx=10,pady=10,bg="#344e5c",width=200,height=200)
-    mat_frame.grid(row = 3, column = 2,columnspan = 10,rowspan = 10, padx=5,pady=5)
-
+    mat_frame = LabelFrame(root, padx=80,pady=75,bg="#344e5c",width=200,height=200)
+    mat_frame.grid(row = 3, column = 2,columnspan = 10,rowspan = 15, padx=5,pady=5)
     matnotes=Button(mat_frame,text="Math Notes", image = nb, compound="top",padx=50,bg="#344e5c",borderwidth=0,command=mathnote)
     matnotes.grid(row=0,column=5,padx=10,columnspan=5)
     matnotes.image=nb
@@ -107,59 +111,3 @@ def math():
     
 
     return 0
-
-#Basic Label
-mainlabel1 = Label(root,pady=0,bg="#344e5c")
-mainlabel2 = Label(root, text="",fg="red",bg="#344e5c")
-booksnotes = Button(root,text="Books",padx=10,pady=10,fg="red",bg="#344e5c",borderwidth=0, command=books)
-videosnotes = Button(root,text="Videos",padx=10,pady=10,fg="red",bg="#344e5c",borderwidth=0,command=videos)
-gamesnotes = Button(root,text="Games",padx=10,pady=10,fg="red",bg="#344e5c",borderwidth=0,command=games)
-notesnotes = Button(root,text="Notes",padx=10,pady=10,fg="red",bg="#344e5c",borderwidth=0,command= note)
-calculatornotes = Button(root,text="Calculator",padx=10,pady=10,fg="red",bg="#344e5c",borderwidth=0,command= calculator)
-
-#pack in grid
-mainlabel1.grid(row=0,column =0)
-mainlabel2.grid(row=1,column=0)
-booksnotes.grid(row=1,column=2)
-videosnotes.grid(row=1,column=4)
-gamesnotes.grid(row=1,column=6)
-notesnotes.grid(row=1,column=8)
-calculatornotes.grid(row=1,column=10)
-
-#
-blankt = []
-j = 3
-for i in range(4):
-    blankt.append(Label(root, text="     can't see me   ",fg="#344e5c",bg="#344e5c"))
-    blankt[i].grid(row = 1, column=j)
-    j += 2
-
-#Notes Labels
-Phynotes = Button(root,text="EPHY",padx=25.5,pady=10,fg="red",bg="#344e5c",borderwidth=0,command=phy)
-CSEnotes = Button(root,text="ECSE",padx=27,pady=10,fg="red",bg="#344e5c",borderwidth=0,command=cse)
-EECEnotes = Button(root,text="EECE",padx=27,pady=10,fg="red",bg="#344e5c",borderwidth=0,command = eece)
-EMATnotes = Button(root,text="EMAT",padx=25,pady=10,fg="red",bg="#344e5c",borderwidth=0,command = math)
-
-#Blank space ?
-blank = []
-j = 2
-for i in range(4):
-    blank.append(Label(root, text="",fg="red",bg="#344e5c"))
-    blank[i].grid(row = j, column=1)
-    j += 2
-
-#Pack Notes
-Phynotes.grid(row = 3, column = 1)
-CSEnotes.grid(row = 5, column = 1)
-EECEnotes.grid(row = 7, column = 1)
-EMATnotes.grid(row = 9, column = 1)
-
-#search box
-
-#search=Entry(root,width=50,bg="red",fg="red",borderwidth=35)
-#search.insert(0,"Search Stuff Here")
-#searchnotes = Button(root,text="Click here to search",padx=10,pady=5,fg="red",bg="red",command= clickme)
-#search.grid(row=4,column=0)
-#searchnotes.grid(row=5,column=0)
-
-root.mainloop()
