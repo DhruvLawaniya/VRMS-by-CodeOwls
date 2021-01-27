@@ -60,14 +60,14 @@ def academic(root) :
     img = ImageTk.PhotoImage(Image.open(r"images\pdf.png"),height=50,width=50)    
     BFrame_left = LabelFrame(root, padx=10,pady=10,bg="#344e5c",width=200,height=200)
     #my button definitions
-    timetablebutton=Button(BFrame_left,text="Ece ",command=timetable)
-    marksbutton=Button(BFrame_left,text="Phy ",command=marks)
-    feesbutton=Button(BFrame_left,text="Fees",command=fees)
+    timetablebutton=Button(BFrame_left,text="Time-Table",command=timetable)
+    marksbutton=Button(BFrame_left,text="Marks",command=marks)
+    feesbutton=Button(BFrame_left,text="Fees Payment",command=fees)
     cirriculumbutton=Button(BFrame_left,text="curriculum",command=cirriculum)
     
     #my button grids
     BFrame_left.grid(row=2,column=0)
-    ecebutton.grid(row=0,column=0)
-    phybutton.grid(row=1,column=0)
-    mathbutton.grid(row=2,column=0)
-    csebutton.grid(row=3,column=0)
+    timetablebutton.grid(row=0,column=0)
+    marksbutton.grid(row=1,column=0)
+    feesbutton.grid(row=2,column=0)
+    cirriculumbutton.grid(row=3,column=0)
