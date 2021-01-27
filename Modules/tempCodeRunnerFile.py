@@ -1,14 +1,1 @@
-def books() :
-    return 0
-
-def videos() :
-    return 0
-
-def calculator() :
-    calc.call()
-
-def games() :
-    return 0
-
-def notes() :
-    return 0
+Phy_frame = LabelFrame(root, text = "Physics", padx=10,pady=10,bg="#344e5c",width=200,height=200)
