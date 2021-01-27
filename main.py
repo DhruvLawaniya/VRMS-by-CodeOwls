@@ -84,12 +84,12 @@ main.grid(row=0,column=0)
 #Basic Label
 mainlabel1 = Label(root,pady=0,bg="#1d2125")
 mainlabel2 = Label(root, text="",fg="white",bg="#1d2125")
-homebutton = Button(root,text="HOME",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=0, command=home)
-booksnotes = Button(root,text="Books",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=0, command=books)
-videosnotes = Button(root,text="Videos",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=0,command=videos)
-gamesnotes = Button(root,text="Games",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=0,command=games)
-notesnotes = Button(root,text="Notes",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=0,command= note)
-calculatornotes = Button(root,text="Calculator",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=0,command= calculator)
+homebutton = Button(root,text="HOME",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1,command=home)
+booksnotes = Button(root,text="Books",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1, command=books)
+videosnotes = Button(root,text="Videos",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1,command=videos)
+gamesnotes = Button(root,text="Games",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1,command=games)
+notesnotes = Button(root,text="Notes",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1,command= note)
+calculatornotes = Button(root,text="Calculator",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1,command= calculator)
 
 #blank space
 blankt = []
