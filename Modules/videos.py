@@ -13,7 +13,6 @@ def ece_playlist():
 def cse_playlist():
     webbrowser.open("https://www.youtube.com/playlist?list=PLygAjP_YxBHu79djZc_rtMDA1YiAPeBSQ")
 
-
 def videos() :
     yt_logo=ImageTk.PhotoImage(Image.open (r"images\youtube logo.ico"))
 
