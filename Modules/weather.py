@@ -19,7 +19,7 @@ month = Label(root, text=dt.strftime('%m %B'), bg='white', font=("bold", 15))
 month.place(x=100, y=130) 
   
 # Time 
-hour = Label(root, text=dt.strftime('%I : %M %p'),bg='white', font=("bold", 15)) 
+hour = Label(root, text=dt.strftime('%I:%M %p'),bg='white', font=("bold", 15)) 
 hour.place(x=10, y=160) 
   
 
@@ -57,9 +57,7 @@ def city_name():
     lable_temp.configure(text=current_temprature) 
     lable_humidity.configure(text=humidity) 
     max_temp.configure(text=tempmax) 
-    min_temp.configure(text=tempmin) 
-    lable_lon.configure(text=longtitude) 
-    lable_lat.configure(text=latitude) 
+    min_temp.configure(text=tempmin)  
     lable_country.configure(text=country) 
     lable_citi.configure(text=citi) 
   
@@ -75,11 +73,6 @@ lable_citi.place(x=10, y=63)
   
 lable_country = Label(root, text="...", width=0,bg='white', font=("bold", 15)) 
 lable_country.place(x=135, y=63) 
-  
-lable_lon = Label(root, text="...", width=0,bg='white', font=("Helvetica", 15)) 
-lable_lon.place(x=25, y=95) 
-lable_lat = Label(root, text="...", width=0,bg='white', font=("Helvetica", 15)) 
-lable_lat.place(x=95, y=95) 
   
 # Current Temperature 
   
