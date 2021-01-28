@@ -103,3 +103,5 @@ notesnotes.grid(row=0,column=4)
 calculatornotes.grid(row=0,column=5)
 Academic.grid(row=0,column=6)
 root.mainloop()
+
+
