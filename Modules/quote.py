@@ -2,7 +2,6 @@ from tkinter import *
 import requests 
 import json
 import random
-from PIL import ImageTk, Image
 
 root = Tk() 
 root.title("Misc") 
@@ -15,7 +14,5 @@ b = random.choice(api)
 
 quote = Label(root,text = b['text']).pack()
 author = Label(root,text = '-'+b['author']).pack()
-
-
 
 root.mainloop()
