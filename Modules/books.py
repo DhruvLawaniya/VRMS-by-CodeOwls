@@ -14,7 +14,9 @@ def books(root) :
          webbrowser.open(urlbook2,new)
        new=1
        BFrame_Right = LabelFrame(root, padx=100,pady=100,bg="#344e5c",width=200,height=200)
-       BFrame_Right.grid(row=3,column=2)  
+       BFrame_Right.grid(row=4,column=2)
+       blanklabel=Label(root,text="\n",bg="#344e5c",borderwidth=0)
+       blanklabel.grid(row=3,column=2)  
        #list ece books and setup their info here itself
        urlbook1 = "https://drive.google.com/file/d/1BfJUZc6QZmCjBllSsvdWYu3kMHJLJuFj/view?usp=sharing"
        
@@ -35,7 +37,9 @@ def books(root) :
          webbrowser.open(urlbook2,new)
        new=1
        BFrame_Right = LabelFrame(root, padx=100,pady=100,bg="#344e5c",width=200,height=200)
-       BFrame_Right.grid(row=3,column=2)  
+       BFrame_Right.grid(row=4,column=2)
+       blanklabel=Label(root,text="\n",bg="#344e5c",borderwidth=0)
+       blanklabel.grid(row=3,column=2)  
        #list ece books and setup their info here itself
        urlbook1 = "https://drive.google.com/file/d/1aMedhLqIBva1qXTFq4K26mvkZw6ZB3Z-/view?usp=sharing"
        
@@ -56,7 +60,9 @@ def books(root) :
          webbrowser.open(urlbook3,new)
        new=1
        BFrame_Right = LabelFrame(root, padx=100,pady=100,bg="#344e5c",width=200,height=200)
-       BFrame_Right.grid(row=3,column=2)  
+       BFrame_Right.grid(row=4,column=2)
+       blanklabel=Label(root,text="\n",bg="#344e5c",borderwidth=0)
+       blanklabel.grid(row=3,column=2)  
        #list ece books and setup their info here itself
        urlbook1 = "https://drive.google.com/file/d/1lQOd54h6lS-1uRBSLFh_f3wIrpjDetu2/view?usp=sharing"
        
@@ -80,7 +86,9 @@ def books(root) :
          webbrowser.open(urlbook3,new)
        new=1
        BFrame_Right = LabelFrame(root, padx=100,pady=100,bg="#344e5c",width=200,height=200)
-       BFrame_Right.grid(row=3,column=2)  
+       BFrame_Right.grid(row=4,column=2)
+       blanklabel=Label(root,text="\n",bg="#344e5c",borderwidth=0)
+       blanklabel.grid(row=3,column=2)  
        #list ece books and setup their info here itself
        urlbook1 = "https://drive.google.com/file/d/16WnwpmYBC5ULP5JvprACY6l7u09O9PxX/view?usp=sharing"
        
