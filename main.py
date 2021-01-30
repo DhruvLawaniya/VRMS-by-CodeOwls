@@ -6,6 +6,7 @@ import Modules.academic as aca
 import Modules.books as b
 import Modules.videos as v
 
+
 root = Tk()
 root.title("Learning Management System By Code Owls")
 root.configure(bg="#24292e")
@@ -54,9 +55,6 @@ for i in range(12):
     blank[i].grid(row = i, column=1)
 
 
-logo=ImageTk.PhotoImage(Image.open (r"images\redbull.png"),width=10, height =50)
-main = Label(Main,image=logo)
-main.grid(row=0,column=0)
 
 
 #Basic Label
