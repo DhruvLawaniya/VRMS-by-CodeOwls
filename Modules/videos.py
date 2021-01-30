@@ -13,7 +13,7 @@ def videos(root) :
     Videoframe = LabelFrame(root, padx=83,pady=112.5,bg="#24292e",width=200,height=200)
     Videoframe.grid(row = 3, column = 2,columnspan = 10,rowspan = 15, padx=5,pady=5)
 
-    yt_logo=ImageTk.PhotoImage(Image.open (r"images\videos.png"))
+    yt_logo=ImageTk.PhotoImage(Image.open (r"images\video.png"))
 
     blankt = []
     j = 1
