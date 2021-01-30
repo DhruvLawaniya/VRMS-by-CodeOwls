@@ -1,1 +1,1 @@
-Phy_frame = LabelFrame(root, text = "Physics", padx=10,pady=10,bg="#344e5c",width=200,height=200)
+root.mainloop()
