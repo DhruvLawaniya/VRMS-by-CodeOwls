@@ -6,11 +6,13 @@ import json
 root = Tk()
 root.geometry("1000x500")
 root.title("Quiz")
-with open(r'Modules\quiz.json') as f:
-    obj = json.load(f)
-q = (obj['ques'])
-options = (obj['options'])
-a = (obj['ans'])
+
+#a = '\quiz.json'
+#with open(r'Modules'+a) as f:
+#    obj = json.load(f)
+#q = (obj['ques'])
+#options = (obj['options'])
+#a = (obj['ans'])
 
 class Quiz():
     def __init__(self):
@@ -77,7 +79,19 @@ class Quiz():
         wrong = "No. of wrong answers: " + str(wc)
         mb.showinfo("Result", "\n".join([result, correct, wrong]))
 
+def click():
+    global obj,q,options,a
+    lel.destroy()
+    with open(r'Modules\quiz.json') as f:
+        obj = json.load(f)
+    q = (obj['ques'])
+    options = (obj['options'])
+    a = (obj['ans'])
+    quiz = Quiz()
+    
 
+    
+lel = Button(root,text = 'PHY',command = click, padx = 25, bg = 'black', fg = 'white')
+lel.pack()
 
-quiz = Quiz()
 root.mainloop()
