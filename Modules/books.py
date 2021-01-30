@@ -12,7 +12,7 @@ def books(root) :
        def openwebbook2():
          webbrowser.open(urlbook2,new)
        new=1
-       BFrame_Right = LabelFrame(root, padx=100,pady=100,bg="#344e5c",width=200,height=200)
+       BFrame_Right = LabelFrame(root,columnspan = 10,rowspan = 15, padx=100,pady=100,bg="#344e5c",width=200,height=200)
        BFrame_Right.grid(row=3,column=2)  
        #list ece books and setup their info here itself
        urlbook1 = "https://drive.google.com/file/d/1BfJUZc6QZmCjBllSsvdWYu3kMHJLJuFj/view?usp=sharing"
@@ -33,7 +33,7 @@ def books(root) :
        def openwebbook2():
          webbrowser.open(urlbook2,new)
        new=1
-       BFrame_Right = LabelFrame(root, padx=100,pady=100,bg="#344e5c",width=200,height=200)
+       BFrame_Right = LabelFrame(root,columnspan = 10,rowspan = 15, padx=100,pady=100,bg="#344e5c",width=200,height=200)
        BFrame_Right.grid(row=3,column=2)  
        #list ece books and setup their info here itself
        urlbook1 = "https://drive.google.com/file/d/1aMedhLqIBva1qXTFq4K26mvkZw6ZB3Z-/view?usp=sharing"
