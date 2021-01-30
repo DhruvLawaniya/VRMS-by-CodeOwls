@@ -50,7 +50,7 @@ MainLeft = LabelFrame(root,bg="#24292e",pady=28,borderwidth=0)
 MainLeft.grid(row = 3, column = 0,rowspan=10,padx=10)
 
 logo=ImageTk.PhotoImage(Image.open (r"images\redbull.png"),width=10, height =50)
-main = Label(Main,image=logo)
+main = Label(Main,image=logo,borderwidth="0")
 main.grid(row=0,column=0)
 
 blank = []

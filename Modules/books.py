@@ -13,7 +13,7 @@ def books(root) :
        def openwebbook2():
          webbrowser.open(urlbook2,new)
        new=1
-       BFrame_Right = LabelFrame(root,columnspan = 10,rowspan = 15, padx=100,pady=100,bg="#344e5c",width=200,height=200)
+       BFrame_Right = LabelFrame(root, padx=100,pady=100,bg="#344e5c",width=200,height=200)
        BFrame_Right.grid(row=3,column=2)  
        #list ece books and setup their info here itself
        urlbook1 = "https://drive.google.com/file/d/1BfJUZc6QZmCjBllSsvdWYu3kMHJLJuFj/view?usp=sharing"
@@ -34,7 +34,7 @@ def books(root) :
        def openwebbook2():
          webbrowser.open(urlbook2,new)
        new=1
-       BFrame_Right = LabelFrame(root,columnspan = 10,rowspan = 15, padx=100,pady=100,bg="#344e5c",width=200,height=200)
+       BFrame_Right = LabelFrame(root, padx=100,pady=100,bg="#344e5c",width=200,height=200)
        BFrame_Right.grid(row=3,column=2)  
        #list ece books and setup their info here itself
        urlbook1 = "https://drive.google.com/file/d/1aMedhLqIBva1qXTFq4K26mvkZw6ZB3Z-/view?usp=sharing"
@@ -95,23 +95,27 @@ def books(root) :
        BFrame_Right.lift()
 
     img = ImageTk.PhotoImage(Image.open(r"images\pdf.png"),height=50,width=50)    
-    BFrame_left = LabelFrame(root, padx=10,pady=10,bg="#344e5c",width=200,height=200)
+    BFrame_left = LabelFrame(root, padx=10,pady=10,bg="#24292e",width=200,height=200,borderwidth="0")
     #my button definitions
-    ecebutton=Button(BFrame_left,text="Ece ",command=ecepush)
-    phybutton=Button(BFrame_left,text="Phy ",command=phypush)
-    mathbutton=Button(BFrame_left,text="Maths ",command=mathpush)
-    csebutton=Button(BFrame_left,text="CSE ",command=csepush)
+    ecebutton=Button(BFrame_left,text="EECE ",command=ecepush,bg="#24292e",fg="white",borderwidth=0)
+    phybutton=Button(BFrame_left,text="EPHY ",command=phypush,bg="#24292e",fg="white",borderwidth=0)
+    mathbutton=Button(BFrame_left,text="EMAT ",command=mathpush,bg="#24292e",fg="white",borderwidth=0)
+    csebutton=Button(BFrame_left,text="ECSE ",command=csepush,bg="#24292e",fg="white",borderwidth=0)
     
+    #blank buttons
+    b1=Label(BFrame_left,text="\n",bg="#24292e",fg="white",borderwidth=0)
+    b2=Label(BFrame_left,text="\n",bg="#24292e",fg="white",borderwidth=0)
+    b3=Label(BFrame_left,text="\n",bg="#24292e",fg="white",borderwidth=0)
+    b4=Label(BFrame_left,text="\n",bg="#24292e",fg="white",borderwidth=0)
     #my button grids
     BFrame_left.grid(row=3,column=0)
-    ecebutton.grid(row=0,column=0)
-    phybutton.grid(row=1,column=0)
-    mathbutton.grid(row=2,column=0)
-    csebutton.grid(row=3,column=0)
+    ecebutton.grid(row=2,column=1)
+    b1.grid(row=1,column=1)
+    phybutton.grid(row=4,column=1)
+    mathbutton.grid(row=6,column=1)
+    csebutton.grid(row=8,column=1)
+    b2.grid(row=3,column=1)
+    b3.grid(row=5,column=1)
+    b4.grid(row=7,column=1)
+    #b1.grid(row=7,column=1)
    
-#books_button = Button(root,text="Books",padx=10,pady=10,fg="blue",bg="#ffffff",command=books)
-
-#pack in grid
-#books_button.grid(row=0,column=0)
-
-#root.mainloop()
