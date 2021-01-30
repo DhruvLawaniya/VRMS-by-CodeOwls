@@ -111,3 +111,27 @@ def math(root):
     
 
     return 0
+
+def notesmain(root):
+    LeftFrame = LabelFrame(root,bg="#1d2125",pady=28,borderwidth=0)
+    LeftFrame.grid(row = 3, column = 0,rowspan=10,padx=10)
+
+    Phynotes = Button(LeftFrame,text="EPHY",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=0,command=lambda:phys(root))
+    CSEnotes = Button(LeftFrame,text="ECSE",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=0,command=lambda:cse(root))
+    EECEnotes = Button(LeftFrame,text="EECE",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=0,command =lambda:eece(root))
+    EMATnotes = Button(LeftFrame,text="EMAT",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=0,command = lambda:math(root))
+
+    Phynotes.grid(row = 0, column = 1)
+    CSEnotes.grid(row = 2, column = 1)
+    EECEnotes.grid(row = 4, column = 1)
+    EMATnotes.grid(row = 6, column = 1)
+ 
+    #blank
+    blank = []
+    j = 1
+    for i in range(4):
+        blank.append(Label(LeftFrame, text=" Trying to make it long ",fg="#1d2125",bg="#1d2125"))
+        blank[i].grid(row = j, column=1)
+        j += 2
+
+    LeftFrame.lift()

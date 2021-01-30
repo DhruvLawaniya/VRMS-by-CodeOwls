@@ -15,66 +15,42 @@ def home():
     Main.lift()
     MainLeft.lift()
     
-def books() :
+def books():
+    home()
     b.books(root)
 
-def videos() :
+def videos():
+    home()
     v.videos(root)
-def academic() :
+
+def academic():
+    home()
     aca.academic(root)
 
-def calculator() :
+def calculator():
+    home()
     calc.call()
 
-def games() :
+def games():
+    home()
     return 0
 
 def note():
-    LeftFrame = LabelFrame(root,bg="#1d2125",pady=28,borderwidth=0)
-    LeftFrame.grid(row = 3, column = 0,rowspan=10,padx=10)
+    home()
+    n.notesmain(root)
 
-    Phynotes = Button(LeftFrame,text="EPHY",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=0,command=phy)
-    CSEnotes = Button(LeftFrame,text="ECSE",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=0,command=cse)
-    EECEnotes = Button(LeftFrame,text="EECE",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=0,command = eece)
-    EMATnotes = Button(LeftFrame,text="EMAT",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=0,command = math)
-
-    Phynotes.grid(row = 0, column = 1)
-    CSEnotes.grid(row = 2, column = 1)
-    EECEnotes.grid(row = 4, column = 1)
-    EMATnotes.grid(row = 6, column = 1)
- 
-    #blank
-    blank = []
-    j = 1
-    for i in range(4):
-        blank.append(Label(LeftFrame, text=" Trying to make it long ",fg="#1d2125",bg="#1d2125"))
-        blank[i].grid(row = j, column=1)
-        j += 2
-
-    LeftFrame.lift()
-
-def phy():
-    n.phys(root)
-
-def math():
-    n.math(root)
-
-def eece():
-    n.eece(root)
-
-def cse():
-    n.cse(root)
-
+Top = LabelFrame(root,bg = "#24292e",width=200,height=10,borderwidth=0)
+Top.grid(row = 0, column=0,columnspan=7,padx=10,pady=20)
 
 Main = LabelFrame(root, padx=200,pady=20,bg="#1d2125",width=200,height=200)
 Main.grid(row = 3, column = 2,columnspan = 10,rowspan = 10, padx=5,pady=5)
 
-MainLeft = LabelFrame(root,bg="#1d2125",pady=28,borderwidth=0)
+MainLeft = LabelFrame(root,bg="#24292e",pady=28,borderwidth=0)
 MainLeft.grid(row = 3, column = 0,rowspan=10,padx=10)
 
 blank = []
-for i in range(8):
-    blank.append(Label(MainLeft, text=" Trying to make it long ",fg="#1d2125",bg="#1d2125"))
+for i in range(12):
+    blank.append(Label(MainLeft, text=" Trying to make it long ",fg="#24292e",bg="#24292e"))
     blank[i].grid(row = i, column=1)
 
 
@@ -84,24 +60,29 @@ main.grid(row=0,column=0)
 
 
 #Basic Label
-mainlabel1 = Label(root,pady=0,bg="#1d2125")
-mainlabel2 = Label(root, text="",fg="white",bg="#1d2125")
-homebutton = Button(root,text="HOME",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1,command=home)
-booksnotes = Button(root,text="Books",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1, command=books)
-videosnotes = Button(root,text="Videos",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1,command=videos)
-gamesnotes = Button(root,text="Games",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1,command=games)
-notesnotes = Button(root,text="Notes",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1,command= note)
-calculatornotes = Button(root,text="Calculator",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1,command= calculator)
-Academic = Button(root,text="Academic",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1,command= academic)
+
+homebutton = Button(Top,text="HOME",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1,command=home)
+booksnotes = Button(Top,text="Books",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1, command=books)
+videosnotes = Button(Top,text="Videos",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1,command=videos)
+gamesnotes = Button(Top,text="Games",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1,command=games)
+notesnotes = Button(Top,text="Notes",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1,command= note)
+calculatornotes = Button(Top,text="Calculator",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1,command= calculator)
+Academic = Button(Top,text="Academic",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1,command= academic)
 
 homebutton.grid(row=0,column=0)
-mainlabel1.grid(row=0,column =0)
-booksnotes.grid(row=0,column=1)
-videosnotes.grid(row=0,column=2)
-gamesnotes.grid(row=0,column=3)
-notesnotes.grid(row=0,column=4)
-calculatornotes.grid(row=0,column=5)
-Academic.grid(row=0,column=6)
+booksnotes.grid(row=0,column=2)
+videosnotes.grid(row=0,column=4)
+gamesnotes.grid(row=0,column=6)
+notesnotes.grid(row=0,column=8)
+calculatornotes.grid(row=0,column=10)
+Academic.grid(row=0,column=12)
+
+j=1
+blanktop = []
+for i in range(6):
+    blanktop.append(Label(Top, text=" k k k ",fg="#24292e",bg="#24292e"))
+    blanktop[i].grid(row = 0, column=j)
+    j+=2
+
+
 root.mainloop()
-
-
