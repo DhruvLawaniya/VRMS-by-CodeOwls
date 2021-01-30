@@ -19,7 +19,7 @@ def videos(root) :
 
     blankt = []
     j = 1
-    for i in range(2):
+    for i in range(3):
         blankt.append(Label(Videoframe, text="         ",fg="#24292e",bg="#24292e"))
         blankt[i].grid(row = 1, column=j)
         j += 2
