@@ -73,11 +73,11 @@ Academic = Button(Top,text="Academic",padx=10,pady=10,fg="white",bg="#1d2125",bo
 
 homebutton.grid(row=0,column=0)
 booksnotes.grid(row=0,column=2)
-videosnotes.grid(row=0,column=4)
-gamesnotes.grid(row=0,column=6)
-notesnotes.grid(row=0,column=8)
+videosnotes.grid(row=0,column=8)
+gamesnotes.grid(row=0,column=12)
+notesnotes.grid(row=0,column=4)
 calculatornotes.grid(row=0,column=10)
-Academic.grid(row=0,column=12)
+Academic.grid(row=0,column=6)
 
 j=1
 blanktop = []
