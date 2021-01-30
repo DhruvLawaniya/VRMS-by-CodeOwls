@@ -5,7 +5,7 @@ import Modules.notes as n
 import Modules.academic as aca
 import Modules.books as b
 import Modules.videos as v
-
+import Modules.games as g
 
 root = Tk()
 root.title("Learning Management System By Code Owls")
@@ -34,6 +34,7 @@ def calculator():
 
 def games():
     home()
+    g.games(root)
     return 0
 
 def note():
