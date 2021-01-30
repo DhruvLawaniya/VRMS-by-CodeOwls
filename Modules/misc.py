@@ -11,9 +11,9 @@ root.geometry("1000x500")
 root.title("Misc")
 
 def snake():
-    global quote, author
-    quote.destroy()
-    author.destroy()
+    #global quote, author
+    #quote.destroy()
+    #author.destroy()
     delay = 0.1  # Setting delay variable to 0.1 seconds
 
     # Score
