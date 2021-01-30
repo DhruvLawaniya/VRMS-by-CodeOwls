@@ -33,8 +33,8 @@ def books(root) :
        def openwebbook2():
          webbrowser.open(urlbook2,new)
        new=1
-       BFrame_Right = LabelFrame(root, padx=100,pady=100,bg="#344e5c",width=200,height=200)
-       BFrame_Right.grid(row=3,column=2)  
+       BFrame_Right = LabelFrame(root, padx=150,pady=50,bg="#344e5c",width=200,height=200)
+       BFrame_Right.grid(row=3,column=2,columnspan=10)  
        #list ece books and setup their info here itself
        urlbook1 = "https://drive.google.com/file/d/1aMedhLqIBva1qXTFq4K26mvkZw6ZB3Z-/view?usp=sharing"
        
@@ -94,19 +94,26 @@ def books(root) :
        BFrame_Right.lift()
 
     img = ImageTk.PhotoImage(Image.open(r"images\pdf.png"),height=50,width=50)    
-    BFrame_left = LabelFrame(root, padx=10,pady=10,bg="#344e5c",width=200,height=200)
+    BFrame_left = LabelFrame(root, pady=5,bg="#24292e",borderwidth=0)
     #my button definitions
-    ecebutton=Button(BFrame_left,text="Ece ",command=ecepush)
-    phybutton=Button(BFrame_left,text="Phy ",command=phypush)
-    mathbutton=Button(BFrame_left,text="Maths ",command=mathpush)
-    csebutton=Button(BFrame_left,text="CSE ",command=csepush)
+    ecebutton=Button(BFrame_left,padx=10,pady=10,text="EECE ",command=ecepush,bg="#24292e",fg="white",borderwidth=0)
+    phybutton=Button(BFrame_left,padx=10,pady=10,text="EPHY",command=phypush,bg="#24292e",fg="white",borderwidth=0)
+    mathbutton=Button(BFrame_left,padx=10,pady=10,text="EMAT",command=mathpush,bg="#24292e",fg="white",borderwidth=0)
+    csebutton=Button(BFrame_left,padx=10,pady=10,text="ECSE",command=csepush,bg="#24292e",fg="white",borderwidth=0)
     
     #my button grids
-    BFrame_left.grid(row=3,column=0)
-    ecebutton.grid(row=0,column=0)
-    phybutton.grid(row=1,column=0)
-    mathbutton.grid(row=2,column=0)
-    csebutton.grid(row=3,column=0)
+    BFrame_left.grid(row=3,column=0,rowspan=10,padx=10)
+    ecebutton.grid(row=4,column=0)
+    phybutton.grid(row=0,column=0)
+    mathbutton.grid(row=6,column=0)
+    csebutton.grid(row=2,column=0)
+
+    blank = []
+    j=1
+    for i in range(4):
+      blank.append(Label(BFrame_left, text=" Trying long ",fg="#24292e",bg="#24292e"))
+      blank[i].grid(row = j, column=0)
+      j+=2
    
 #books_button = Button(root,text="Books",padx=10,pady=10,fg="blue",bg="#ffffff",command=books)
 

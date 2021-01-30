@@ -49,6 +49,10 @@ Main.grid(row = 3, column = 2,columnspan = 10,rowspan = 10, padx=5,pady=5)
 MainLeft = LabelFrame(root,bg="#24292e",pady=28,borderwidth=0)
 MainLeft.grid(row = 3, column = 0,rowspan=10,padx=10)
 
+logo=ImageTk.PhotoImage(Image.open (r"images\redbull.png"),width=10, height =50)
+main = Label(Main,image=logo)
+main.grid(row=0,column=0)
+
 blank = []
 for i in range(12):
     blank.append(Label(MainLeft, text=" Trying to make it long ",fg="#24292e",bg="#24292e"))
