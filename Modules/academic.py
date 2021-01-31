@@ -9,13 +9,13 @@ def academic(root) :
        def openwebbook1():
          webbrowser.open(urlbook1,new)
        new=1
-       BFrame_Right = LabelFrame(root, padx=80,pady=75,bg="#344e5c",width=200,height=200)
-       BFrame_Right.grid(row = 3, column = 2,columnspan = 10,rowspan = 15, padx=5,pady=5) 
+       ttFrame = LabelFrame(root, padx=80,pady=75,bg="#455954",width=200,height=200)
+       ttFrame.grid(row = 3, column = 2,columnspan = 10,rowspan = 15, padx=5,pady=5) 
        #list ece books and setup their info here itself
        urlbook1 = "https://icampus.bennett.edu.in/#/home/v1/stimetable"
-       book1= Button(BFrame_Right,text="TimeTable",compound="top",image=img3,bg="#dfdbd8",borderwidth=0,command=openwebbook1)
-       book1.grid(row=4,column=2)
-       BFrame_Right.lift()
+       book1= Button(ttFrame,text="TimeTable",compound="top",image=img3,bg="#455954",fg="#dfdbd8",borderwidth=0,command=openwebbook1)
+       book1.grid(row=0,column=5,padx=10,columnspan=5,pady=30)
+       ttFrame.lift()
 
 
     def marks():
