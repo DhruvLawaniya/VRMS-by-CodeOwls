@@ -84,5 +84,4 @@ for i in range(6):
     blanktop[i].grid(row = 0, column=j)
     j+=2
 
-
 root.mainloop()
