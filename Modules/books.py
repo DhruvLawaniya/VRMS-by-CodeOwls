@@ -105,10 +105,10 @@ def books(root) :
     img = ImageTk.PhotoImage(Image.open(r"images\pdf.png"),height=50,width=50)    
     BFrame_left = LabelFrame(root, padx=10,pady=10,bg="#24292e",width=200,height=200,borderwidth="0")
     #my button definitions
-    ecebutton=Button(BFrame_left,text="EECE ",command=ecepush,padx=10,pady=10,fg="white",bg="#24292e",borderwidth=0)
     phybutton=Button(BFrame_left,text="EPHY ",command=phypush,padx=10,pady=10,fg="white",bg="#24292e",borderwidth=0)
-    mathbutton=Button(BFrame_left,text="EMAT ",command=mathpush,padx=10,pady=10,fg="white",bg="#24292e",borderwidth=0)
     csebutton=Button(BFrame_left,text="ECSE ",command=csepush,padx=10,pady=10,fg="white",bg="#24292e",borderwidth=0)
+    ecebutton=Button(BFrame_left,text="EECE ",command=ecepush,padx=10,pady=10,fg="white",bg="#24292e",borderwidth=0)
+    mathbutton=Button(BFrame_left,text="EMAT ",command=mathpush,padx=10,pady=10,fg="white",bg="#24292e",borderwidth=0)
     
     #blank buttons
     #b1=Label(BFrame_left,text="\n",bg="#24292e",fg="white",borderwidth=0)
@@ -117,11 +117,11 @@ def books(root) :
     #b4=Label(BFrame_left,text="\n",bg="#24292e",fg="white",borderwidth=0)
     #my button grids
     BFrame_left.grid(row = 3, column = 0,rowspan=10,padx=10)
-    ecebutton.grid(row=0,column=1)
+    phybutton.grid(row=0,column=1)
+    csebutton.grid(row=2,column=1)
+    ecebutton.grid(row=4,column=1)
     #b1.grid(row=1,column=1)
-    phybutton.grid(row=2,column=1)
-    mathbutton.grid(row=4,column=1)
-    csebutton.grid(row=6,column=1)
+    mathbutton.grid(row=6,column=1)
     #b2.grid(row=3,column=1)
     #b3.grid(row=5,column=1)
     #b4.grid(row=7,column=1)
