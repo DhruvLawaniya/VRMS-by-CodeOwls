@@ -3,19 +3,9 @@ from tkinter import messagebox as mb
 import random
 import json
 
-
 root = Tk()
 root.geometry("1000x500")
 root.title("Quiz")
-
-list = [1, 2, 3, 4, 5] 
-
-#a = '\quiz.json'
-#with open(r'Modules'+a) as f:
-#    obj = json.load(f)
-#q = (obj['ques'])
-#options = (obj['options'])
-#a = (obj['ans'])
 
 class Quiz():
     def __init__(self):
@@ -128,7 +118,6 @@ def cse():
     matB.destroy()
     cseB.destroy()
     yes = random.randint(0,7)
-    print(yes)
     with open(r'Modules\cse.json') as f:
         obj = json.load(f)
     q = (obj['ques'][yes:yes+3])
