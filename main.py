@@ -10,7 +10,7 @@ import Modules.games as g
 root = Tk()
 root.title("Learning Management System By Code Owls")
 root.configure(bg="#24292e")
-root.geometry("1000x500")
+root.geometry("900x500")
 
 def home():
     Main.lift()
