@@ -59,9 +59,6 @@ for i in range(12):
     blank.append(Label(MainLeft, text=" Trying to make it long ",fg="#24292e",bg="#24292e"))
     blank[i].grid(row = i, column=1)
 
-
-
-
 #Basic Label
 
 homebutton = Button(Top,text="HOME",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1,command=home)

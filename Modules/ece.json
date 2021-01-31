@@ -1,0 +1,12 @@
+{
+   "ques" : [
+    "If a voltage (At2 + Bt3/2 + C) V is applied across a 4.8 uF capacitor, then evaluate the current (in uA) \n flowing through the capacitor at t = 1.1 seconds. Given A=1.5, B=3.2, C=5.6 \n"
+    ],
+
+    "options" : [
+    ["-1.73", "66.88", "40", "-1.28"]
+    ],
+
+    "ans" : [ 3 ]
+
+}
