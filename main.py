@@ -5,7 +5,7 @@ import Modules.notes as n
 import Modules.academic as aca
 import Modules.books as b
 import Modules.videos as v
-import Modules.games as g
+import Modules.misc as m
 
 root = Tk()
 root.title("Learning Management System By Code Owls")
@@ -32,10 +32,9 @@ def calculator():
     home()
     calc.call()
 
-def games():
+def misc():
     home()
-    g.games(root)
-    return 0
+    m.notesmain(root)
 
 def note():
     home()
@@ -64,7 +63,7 @@ for i in range(12):
 homebutton = Button(Top,text="HOME",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1,command=home)
 booksnotes = Button(Top,text="Books",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1, command=books)
 videosnotes = Button(Top,text="Videos",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1,command=videos)
-gamesnotes = Button(Top,text="Games",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1,command=games)
+miscnotes = Button(Top,text="Misc",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1,command=misc)
 notesnotes = Button(Top,text="Notes",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1,command= note)
 calculatornotes = Button(Top,text="Calculator",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1,command= calculator)
 Academic = Button(Top,text="Academic",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1,command= academic)
@@ -72,7 +71,7 @@ Academic = Button(Top,text="Academic",padx=10,pady=10,fg="white",bg="#1d2125",bo
 homebutton.grid(row=0,column=0)
 booksnotes.grid(row=0,column=2)
 videosnotes.grid(row=0,column=8)
-gamesnotes.grid(row=0,column=12)
+miscnotes.grid(row=0,column=12)
 notesnotes.grid(row=0,column=4)
 calculatornotes.grid(row=0,column=10)
 Academic.grid(row=0,column=6)
