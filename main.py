@@ -29,7 +29,6 @@ def academic():
     aca.academic(root)
 
 def calculator():
-    home()
     calc.call()
 
 def misc():
