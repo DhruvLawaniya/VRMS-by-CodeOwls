@@ -5,6 +5,7 @@ def call():
     root = Tk()
     root.geometry("300x500")
     root.title("TIC TAC TOE")
+    root.configure(bg="#24292e")
 
     head = Label(root,text="TIC-TAC-TOE",fg="forestgreen",bg="light cyan",font=("Arial",20,"italic"))
     head.pack()
@@ -49,28 +50,28 @@ def call():
             
     def WinCheck():
         if b1['text'] == "O" and b2['text'] == "O" and b3['text'] == "O":
-            b1['bg']="light green";b2['bg']="light green";b3['bg']="light green"
+            b1['bg']="#1d2125";b2['bg']="#1d2125";b3['bg']="#1d2125"
             return "p1"
         elif b4['text'] == "O" and b5['text'] == "O" and b6['text'] == "O":
-            b4['bg']="light green";b5['bg']="light green";b6['bg']="light green"
+            b4['bg']="#1d2125";b5['bg']="#1d2125";b6['bg']="#1d2125"
             return "p1"
         elif b7['text'] == "O" and b8['text'] == "O" and b9['text'] == "O":
-            b7['bg']="light green";b8['bg']="light green";b9['bg']="light green"
+            b7['bg']="#1d2125";b8['bg']="#1d2125";b9['bg']="#1d2125"
             return "p1"
         elif b1['text'] == "O" and b4['text'] == "O" and b7['text'] == "O":
-            b1['bg']="light green";b4['bg']="light green";b7['bg']="light green"
+            b1['bg']="#1d2125";b4['bg']="#1d2125";b7['bg']="#1d2125"
             return "p1"
         elif b2['text'] == "O" and b5['text'] == "O" and b8['text'] == "O":
-            b2['bg']="light green";b5['bg']="light green";b8['bg']="light green"
+            b2['bg']="#1d2125";b5['bg']="#1d2125";b8['bg']="#1d2125"
             return "p1"
         elif b3['text'] == "O" and b6['text'] == "O" and b9['text'] == "O":
-            b3['bg']="light green";b6['bg']="light green";b9['bg']="light green"
+            b3['bg']="#1d2125";b6['bg']="#1d2125";b9['bg']="#1d2125"
             return "p1"
         elif b1['text'] == "O" and b5['text'] == "O" and b9['text'] == "O":
-            b1['bg']="light green";b5['bg']="light green";b9['bg']="light green"
+            b1['bg']="#1d2125";b5['bg']="#1d2125";b9['bg']="#1d2125"
             return "p1"
         elif b3['text'] == "O" and b5['text'] == "O" and b7['text'] == "O":
-            b3['bg']="light green";b5['bg']="light green";b7['bg']="light green"
+            b3['bg']="#1d2125";b5['bg']="#1d2125";b7['bg']="#1d2125"
             return "p1"
         
         if b1['text'] == "X" and b2['text'] == "X" and b3['text'] == "X":

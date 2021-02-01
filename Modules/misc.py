@@ -24,7 +24,7 @@ def notesmain(root):
 
     Calcnotes = Button(LeftFrame,text="Calculator",padx=10,pady=10,fg="white",bg="#24292e",borderwidth=0,command=lambda:calcu(root))
     Weathernotes = Button(LeftFrame,text="Weather",padx=10,pady=10,fg="white",bg="#24292e",borderwidth=0,command=lambda:we(root))
-    Snake = Button(LeftFrame,text="Tic-Tak-Toe",padx=10,pady=10,fg="white",bg="#24292e",borderwidth=0,command=snake)
+    Snake = Button(LeftFrame,text="Tic-Tac-Toe",padx=10,pady=10,fg="white",bg="#24292e",borderwidth=0,command=snake)
 
     Calcnotes.grid(row = 0, column = 1)
     Weathernotes.grid(row = 2, column = 1)

@@ -1,1 +1,1 @@
-bg="#1d2125
+root.configure(bg="#24292e")
