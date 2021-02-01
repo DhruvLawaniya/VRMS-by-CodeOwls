@@ -1,195 +1,216 @@
-import turtle
-import time  # Time module can be used to create a delay
-import random  # It helps us choose random modules
+from tkinter import *
 
-delay = 0.1  # Setting delay variable to 0.1 seconds
+def call():
+    
+    root = Tk()
+    root.geometry("300x500")
+    root.title("TIC TAC TOE")
 
-# Score
-score = 0  # Initialising variable score and high_score
-high_score = 0
+    head = Label(root,text="TIC-TAC-TOE",fg="forestgreen",bg="light cyan",font=("Arial",20,"italic"))
+    head.pack()
 
+    p1_name = ""
+    p2_name = ""
+    START = False
+    def Start():
+        global p1_name,p2_name,START
+        P1 = p1.get()
+        P2 = p2.get()
 
-#Set up the screen
-wn = turtle.Screen()
-wn.title("Snake Game by Afroz")  # Setting the title of screen
-wn.bgcolor("green")  # Setting the color
-wn.setup(width=600, height=600)  # Setting up of the screen
-wn.tracer(0)  # turns off the screen update (makes the module go as fast as possible)
+        if P1.split() == []:
+            text = "Enter Player 1 Name"
+            turn.place(x=50,y=455)
+            turn['fg'] = "red"
+            turn['text'] = text
+        elif P2.split() == []:
+            text = "Enter Player 2 Name"
+            turn.place(x=50,y=455)
+            turn['fg'] = "red"
+            turn['text'] = text
+        elif P1.split() == P2.split():
+            text = "Enter Different Player Names"
+            turn.place(x=25,y=455)
+            turn['fg'] = "red"
+            turn['text'] = text
+        else:
+            p1_name = P1
+            p2_name = P2
+            p1['font'] = ("Arial",8,"bold")
+            p2['font'] = ("Arial",8,"bold")
+            p1['state']=DISABLED
+            p2['state']=DISABLED
 
-# Snake game
-head = turtle.Turtle()
-head.speed(0)  # Setting the speed of animation
-head.shape("square")
-head.color("black")
-head.penup()  # we don't want the turtle module to draw lines
-head.goto(0, 0)  # Position of the head at the beginning
-head.direction = "stop"  # When it starts it just sits there (here head.direction is assigned to "stop")
+            start.place(x=1000,y=1000)
+            turn['text'] = "{}{} Turn".format(p1_name,"'s")
+            turn['fg'] = "blue"
+            turn['font'] = ("Ubuntu",20,"bold")
+            turn.place(x=50,y=425)
+            START = True
+            
+    def WinCheck():
+        if b1['text'] == "O" and b2['text'] == "O" and b3['text'] == "O":
+            b1['bg']="light green";b2['bg']="light green";b3['bg']="light green"
+            return "p1"
+        elif b4['text'] == "O" and b5['text'] == "O" and b6['text'] == "O":
+            b4['bg']="light green";b5['bg']="light green";b6['bg']="light green"
+            return "p1"
+        elif b7['text'] == "O" and b8['text'] == "O" and b9['text'] == "O":
+            b7['bg']="light green";b8['bg']="light green";b9['bg']="light green"
+            return "p1"
+        elif b1['text'] == "O" and b4['text'] == "O" and b7['text'] == "O":
+            b1['bg']="light green";b4['bg']="light green";b7['bg']="light green"
+            return "p1"
+        elif b2['text'] == "O" and b5['text'] == "O" and b8['text'] == "O":
+            b2['bg']="light green";b5['bg']="light green";b8['bg']="light green"
+            return "p1"
+        elif b3['text'] == "O" and b6['text'] == "O" and b9['text'] == "O":
+            b3['bg']="light green";b6['bg']="light green";b9['bg']="light green"
+            return "p1"
+        elif b1['text'] == "O" and b5['text'] == "O" and b9['text'] == "O":
+            b1['bg']="light green";b5['bg']="light green";b9['bg']="light green"
+            return "p1"
+        elif b3['text'] == "O" and b5['text'] == "O" and b7['text'] == "O":
+            b3['bg']="light green";b5['bg']="light green";b7['bg']="light green"
+            return "p1"
+        
+        if b1['text'] == "X" and b2['text'] == "X" and b3['text'] == "X":
+            b1['bg']="light blue";b2['bg']="light blue";b3['bg']="light blue"
+            return "p2"
+        elif b4['text'] == "X" and b5['text'] == "X" and b6['text'] == "X":
+            b4['bg']="light blue";b5['bg']="light blue";b6['bg']="light blue"
+            return "p2"
+        elif b7['text'] == "X" and b8['text'] == "X" and b9['text'] == "X":
+            b7['bg']="light blue";b8['bg']="light blue";b9['bg']="light blue"
+            return "p2"
+        elif b1['text'] == "X" and b4['text'] == "X" and b7['text'] == "X":
+            b1['bg']="light blue";b4['bg']="light blue";b7['bg']="light blue"
+            return "p2"
+        elif b2['text'] == "X" and b5['text'] == "X" and b8['text'] == "X":
+            b2['bg']="light blue";b5['bg']="light blue";b8['bg']="light blue"
+            return "p2"
+        elif b3['text'] == "X" and b6['text'] == "X" and b9['text'] == "X":
+            b3['bg']="light blue";b6['bg']="light blue";b9['bg']="light blue"
+            return "p2"
+        elif b1['text'] == "X" and b5['text'] == "X" and b9['text'] == "X":
+            b1['bg']="light blue";b5['bg']="light blue";b9['bg']="light blue"
+            return "p2"
+        elif b3['text'] == "X" and b5['text'] == "X" and b7['text'] == "X":
+            b3['bg']="light blue";b5['bg']="light blue";b7['bg']="light blue"
+            return "p2"
+        
+        elif (b1['text'] != "" and b2['text'] != "" and b3['text'] != "" and
+            b4['text'] != "" and b5['text'] != "" and b6['text'] != "" and
+            b7['text'] != "" and b8['text'] != "" and b9['text'] != ""):
+            return "tie"
+            
+        else:
+            return False
+    def DisableButtons(ButtonList):
+        for a in range(len(ButtonList)):
+            ButtonList[a]['state'] = DISABLED
+    def EnableButtons(ButtonList):
+        for a in range(len(ButtonList)):
+            ButtonList[a]['state'] = NORMAL
+    def BtnClick(button):
+        global START,p1_name,p2_name
+        if START == True:
+            if button['text'] == "":
+                if turn['text'] == "{}{} Turn".format(p1_name,"'s"):
+                    button['text'] = "O"
+                    turn['text'] = "{}{} Turn".format(p2_name,"'s")
+                else:
+                    button['text'] = "X"
+                    turn['text'] = "{}{} Turn".format(p1_name,"'s")
 
-# Food
+            check = WinCheck()
+            if check != False:
+                restart.place(x=105,y=470)
+                START = False
+                if check=="p1":
+                    text = "{} Wins".format(p1_name)
+                    buttons = [b1,b2,b3,b4,b5,b6,b7,b8,b9]
+                    Remove = []
+                    for i in range(9):
+                        if buttons[i]['bg'] == "light green":
+                            Remove.append(buttons[i])
+                elif check=="p2":
+                    text = "{} Wins".format(p2_name)
+                    buttons = [b1,b2,b3,b4,b5,b6,b7,b8,b9]
+                    Remove = []
+                    for i in range(9):
+                        if buttons[i]['bg'] == "light blue":
+                            Remove.append(buttons[i])
+                else:
+                    text = "It is a tie !"
+                turn['fg'] = "forestgreen"
+                turn['text'] = text
 
-food = turtle.Turtle()
-food.speed(0)  # Setting the speed of animation
-food.shape("circle")
-food.color("Red")
-food.penup()  # we don't want the turtle module to draw lines
-food.goto(0, 60)  # Position of the food at the beginning (The turtle module assigns the value to (0, 0) by default)
+                if check == "p1" or check == "p2":
+                    for i in range(len(Remove)):
+                        buttons.remove(Remove[i])
+                    DisableButtons(buttons)
 
-segments = []  # Creating an empty list for adding segments
+    def Restart():
+        Buttons = [b1,b2,b3,b4,b5,b6,b7,b8,b9]
+        EnableButtons([p1,p2])
+        EnableButtons(Buttons)
+        restart.place(x=1000,y=1000)
+        for a in range(len(Buttons)):
+            Buttons[a]['text'] = ""
+            Buttons[a]['bg'] = "SystemButtonFace"
+        turn['text'] = ""
+        start.place(x=107,y=410)
+        p1['font'] = "TkTextFont"
+        p2['font'] = "TkTextFont"
+    ####################################################################################
 
-# Pen
-pen = turtle.Turtle()
-pen.speed(0) # Animation speed
-pen.shape("square")  # Just to be consistent
-pen.color("White")
-pen.penup()
-pen.hideturtle()  # Since we do not want the turtle onscreen
-pen.goto(0, 260)   # Position of the text on screen
-pen.write("Score: 0 High Score: 0", align="center", font=("Courier", 20, "normal"))  # displaying default score onscreen
+    Label(root,text="Player 1 :",fg="brown",font=("Courier",10,"bold")).place(x=0,y=50)
+    p1 = Entry(root)
+    p1.place(x=90,y=52)
 
+    Label(root,text="Player 2 :",fg="brown",font=("Courier",10,"bold")).place(x=0,y=75)
+    p2 = Entry(root)
+    p2.place(x=90,y=77)
 
-# Functions
-def go_up():     # This function sets the value of head.direction to "right"
-    if head.direction!="down":  # This restricts the movement of snake in one direction only
-        head.direction="up"
+    start = Button(root,text="START",bg="gray90",fg="green",font=("Ubuntu",15,"bold"),command=Start)
+    start.place(x=107,y=410)
 
+    turn = Label(root,text="",font=("Ubuntu",15,"normal"))
+    turn.place(x=50,y=455)
 
-def go_down():
-    if head.direction != "up":
-        head.direction="down"
+    ###################################
 
+    b1 = Button(root,width=13,height=6,command = lambda:BtnClick(b1),bg="#1d2125",fg="white")
+    b1.place(x=0,y=100)
 
-def go_right():
-    if head.direction != "left":
-        head.direction="right"
+    b2 = Button(root,width=13,height=6,command = lambda:BtnClick(b2),bg="#1d2125",fg="white")
+    b2.place(x=100,y=100)
 
+    b3 = Button(root,width=13,height=6,command = lambda:BtnClick(b3),bg="#1d2125",fg="white")
+    b3.place(x=200,y=100)
 
-def go_left():
-    if head.direction != "right":
-        head.direction="left"
+    b4 = Button(root,width=13,height=6,command = lambda:BtnClick(b4),bg="#1d2125",fg="white")
+    b4.place(x=0,y=200)
 
+    b5 = Button(root,width=13,height=6,command = lambda:BtnClick(b5),bg="#1d2125",fg="white")
+    b5.place(x=100,y=200)
 
-def move():
-    if head.direction == "up":
-        y=head.ycor()  # Setting the current y-coordinate to variable y
-        head.sety(y + 20)  # when we press the up button it will move the head by 20 pixels each time
+    b6 = Button(root,width=13,height=6,command = lambda:BtnClick(b6),bg="#1d2125",fg="white")
+    b6.place(x=200,y=200)
 
-    if head.direction == "down":
-        y=head.ycor()
-        head.sety(y - 20)
+    b7 = Button(root,width=13,height=6,command = lambda:BtnClick(b7),bg="#1d2125",fg="white")
+    b7.place(x=0,y=300)
 
-    if head.direction == "right":
-        x=head.xcor()
-        head.setx(x + 20)
+    b8 = Button(root,width=13,height=6,command = lambda:BtnClick(b8),bg="#1d2125",fg="white")
+    b8.place(x=100,y=300)
 
-    if head.direction == "left":
-        x = head.xcor()
-        head.setx(x - 20)
+    b9 = Button(root,width=13,height=6,command = lambda:BtnClick(b9),bg="#1d2125",fg="white")
+    b9.place(x=200,y=300)
 
-# Keyboard bindings
+    ###################################
 
+    restart = Button(root,text="Restart",fg="blue",bg="aquamarine",width = 10,height=1,font=("Courier",10,"bold"),command = Restart)
+    ##restart.place(x=105,y=470)
+    restart.place(x=1000,y=1000)
 
-wn.listen()  # This will make the turtle module active to keypresses and clicks
-wn.onkeypress(go_up, "Up")  # It will call the function go_up() when we press the "up" button
-wn.onkeypress(go_down, "Down")  # Notice,sHere we don't have go_down with parenthesis ()
-wn.onkeypress(go_left, "Left")
-wn.onkeypress(go_right, "Right")
-
-# Main game loop:
-while True:
-
-    wn.update()  # Everytime it enters the loop it updates the screen
-
-    # Check for a collision with the border
-    if head.xcor() < -290 or head.xcor() > 290 or head.ycor() > 290 or head.ycor() < -290:
-        time.sleep(1)  # It pauses the game
-        head.goto(0, 0)  # It resets the head back to (0,0) position
-        head.direction = "stop"
-
-        # Hide the segments:
-        for segment in segments:
-            segment.goto(1000, 1000)  # Could not find a way to actually delete a segment in turtle module
-
-        # Clear the segments list
-        segments.clear()  # To clear the list of segments
-
-        # Reset the score
-        score = 0
-
-        # Reset the delay
-        #delay = 0.1
-
-        # Update the score display
-        pen.clear()
-        pen.write("Score: {} High Score: {}".format(score, high_score), align="center", font=("Courier", 20, "normal"))
-
-    # Check for the collision with the food
-    if head.distance(food) < 20:  # If the distance between the head and the food is less than 20 pixels run the loop
-        # Move the food to a random spot (It changes the position of the food when we hit it)
-        x=random.randint(-290, 290)  # It chooses a random number from -290 to 290 and assigns it to x
-        y=random.randint(-290, 290)
-        food.goto(x, y)  # It places the food that position
-
-
-        # Add a segment
-        new_segment = turtle.Turtle()  # creating a turtle for additional segments
-        new_segment.speed(0)
-        new_segment.shape("square")
-        new_segment.color("grey")
-        new_segment.penup()  # So that the new_segment does not draw on the screen
-        segments.append(new_segment)  # It appends the new_segment to the segments list
-
-        # Shorten the delay of text appearing on the screen
-        #delay -= 0.001
-
-        # Increase the score
-        score += 10
-        if score > high_score:
-            high_score = score
-
-        pen.clear()  # Before we write the new score on the screen we clear it
-        pen.write("Score: {} High Score: {}".format(score, high_score), align="center", font=("Courier", 20, "normal"))
-
-    # Move the end segments first in reverse  # Move the back to the front
-    for index in range(len(segments)-1, 0, -1):  #  goes from 9 to 0 if length==10
-        x = segments[index-1].xcor()  #
-        y = segments[index-1].ycor()
-        segments[index].goto(x, y)  # We want segment 9 to move to where segment 8 was previously
-
-    # Move segment 0 to where the head is (It is special case)
-    if len(segments) > 0:  # It is the segment after the head (It will do something if there are more than one segment)
-        x = head.xcor()
-        y = head.ycor()
-        segments[0].goto(x, y)
-
-    move() # Calling the function move
-
-    # Check for head collision with the body segments
-    for segment in segments:
-        if segment.distance(head) < 10: # When the distance between the head and segment is less than 10 pixels run this loop
-            time.sleep(1)
-            head.goto(0, 0)
-            head.direction = "stop"
-
-            # Hide the segments:
-            for segment in segments:
-                segment.goto(1000, 1000)  # Could not find a way to actually delete a segment in turtle module
-
-            # Clear the segments list
-            segments.clear()  # To clear the list of segments
-
-            # Reset score
-            score = 0
-
-            # Reset the delay
-            #delay = 0.01
-
-            # Update the score display
-            pen.clear()
-            pen.write("Score: {} High Score: {}".format(score, high_score), align="center",
-                      font=("Courier", 20, "normal"))
-
-    time.sleep(delay)  # passing delay to time.sleep
-
-
-
-wn.mainloop() # It keeps the screen open for us  # This is the last line of program
+    root.mainloop()
