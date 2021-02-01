@@ -7,7 +7,7 @@ def call():
     root.title("TIC TAC TOE")
     root.configure(bg="#24292e")
 
-    head = Label(root,text="TIC-TAC-TOE",fg="forestgreen",bg="light cyan",font=("Arial",20,"italic"))
+    head = Label(root,text="TIC-TAC-TOE",fg="white",bg="#1d2125",font=("Arial",20,"italic"))
     head.pack()
 
     p1_name = ""
@@ -75,28 +75,28 @@ def call():
             return "p1"
         
         if b1['text'] == "X" and b2['text'] == "X" and b3['text'] == "X":
-            b1['bg']="light blue";b2['bg']="light blue";b3['bg']="light blue"
+            b1['bg']="#1d2125";b2['bg']="#1d2125";b3['bg']="#1d2125"
             return "p2"
         elif b4['text'] == "X" and b5['text'] == "X" and b6['text'] == "X":
-            b4['bg']="light blue";b5['bg']="light blue";b6['bg']="light blue"
+            b4['bg']="#1d2125";b5['bg']="#1d2125";b6['bg']="#1d2125"
             return "p2"
         elif b7['text'] == "X" and b8['text'] == "X" and b9['text'] == "X":
-            b7['bg']="light blue";b8['bg']="light blue";b9['bg']="light blue"
+            b7['bg']="#1d2125";b8['bg']="#1d2125";b9['bg']="#1d2125"
             return "p2"
         elif b1['text'] == "X" and b4['text'] == "X" and b7['text'] == "X":
-            b1['bg']="light blue";b4['bg']="light blue";b7['bg']="light blue"
+            b1['bg']="#1d2125";b4['bg']="#1d2125";b7['bg']="#1d2125"
             return "p2"
         elif b2['text'] == "X" and b5['text'] == "X" and b8['text'] == "X":
-            b2['bg']="light blue";b5['bg']="light blue";b8['bg']="light blue"
+            b2['bg']="#1d2125";b5['bg']="#1d2125";b8['bg']="#1d2125"
             return "p2"
         elif b3['text'] == "X" and b6['text'] == "X" and b9['text'] == "X":
-            b3['bg']="light blue";b6['bg']="light blue";b9['bg']="light blue"
+            b3['bg']="#1d2125";b6['bg']="#1d2125";b9['bg']="#1d2125"
             return "p2"
         elif b1['text'] == "X" and b5['text'] == "X" and b9['text'] == "X":
-            b1['bg']="light blue";b5['bg']="light blue";b9['bg']="light blue"
+            b1['bg']="#1d2125";b5['bg']="#1d2125";b9['bg']="#1d2125"
             return "p2"
         elif b3['text'] == "X" and b5['text'] == "X" and b7['text'] == "X":
-            b3['bg']="light blue";b5['bg']="light blue";b7['bg']="light blue"
+            b3['bg']="#1d2125";b5['bg']="#1d2125";b7['bg']="#1d2125"
             return "p2"
         
         elif (b1['text'] != "" and b2['text'] != "" and b3['text'] != "" and
@@ -139,7 +139,7 @@ def call():
                     buttons = [b1,b2,b3,b4,b5,b6,b7,b8,b9]
                     Remove = []
                     for i in range(9):
-                        if buttons[i]['bg'] == "light blue":
+                        if buttons[i]['bg'] == "#1d2125":
                             Remove.append(buttons[i])
                 else:
                     text = "It is a tie !"
@@ -158,7 +158,7 @@ def call():
         restart.place(x=1000,y=1000)
         for a in range(len(Buttons)):
             Buttons[a]['text'] = ""
-            Buttons[a]['bg'] = "SystemButtonFace"
+            Buttons[a]['bg'] = "#1d2125"
         turn['text'] = ""
         start.place(x=107,y=410)
         p1['font'] = "TkTextFont"
