@@ -3,9 +3,7 @@ from tkinter import messagebox as mb
 import random
 import json
 
-root = Tk()
-root.geometry("1000x500")
-root.title("Quiz")
+
 
 class Quiz():
     def __init__(self):
@@ -72,66 +70,71 @@ class Quiz():
         wrong = "No. of wrong answers: " + str(wc)
         mb.showinfo("Result", "\n".join([result, correct, wrong]))
 
-def phy():
-    global obj,q,options,a
-    phyB.destroy()
-    eceB.destroy()
-    matB.destroy()
-    cseB.destroy()
-    with open(r'Modules\phy.json') as f:
-        obj = json.load(f)
-    q = (obj['ques'])
-    options = (obj['options'])
-    a = (obj['ans'])
-    quiz = Quiz()
+def call(root):
+    root = Tk()
+    root.geometry("1000x500")
+    root.title("Quiz")
 
-def ece():
-    global obj,q,options,a
-    phyB.destroy()
-    eceB.destroy()
-    matB.destroy()
-    cseB.destroy()
-    with open(r'Modules\ece.json') as f:
-        obj = json.load(f)
-    q = (obj['ques'])
-    options = (obj['options'])
-    a = (obj['ans'])
-    quiz = Quiz()
+    def ece():
+        global obj,q,options,a
+        phyB.destroy()
+        eceB.destroy()
+        matB.destroy()
+        cseB.destroy()
+        with open(r'Modules\ece.json') as f:
+            obj = json.load(f)
+        q = (obj['ques'])
+        options = (obj['options'])
+        a = (obj['ans'])
+        quiz = Quiz()
 
-def mat():
-    global obj,q,options,a
-    phyB.destroy()
-    eceB.destroy()
-    matB.destroy()
-    cseB.destroy()
-    with open(r'Modules\mat.json') as f:
-        obj = json.load(f)
-    q = (obj['ques'])
-    options = (obj['options'])
-    a = (obj['ans'])
-    quiz = Quiz()
+    def mat():
+        global obj,q,options,a
+        phyB.destroy()
+        eceB.destroy()
+        matB.destroy()
+        cseB.destroy()
+        with open(r'Modules\mat.json') as f:
+            obj = json.load(f)
+        q = (obj['ques'])
+        options = (obj['options'])
+        a = (obj['ans'])
+        quiz = Quiz()
 
-def cse():
-    global obj,q,options,a
-    phyB.destroy()
-    eceB.destroy()
-    matB.destroy()
-    cseB.destroy()
-    yes = random.randint(0,7)
-    with open(r'Modules\cse.json') as f:
-        obj = json.load(f)
-    q = (obj['ques'][yes:yes+3])
-    options = (obj['options'][yes:yes+3])
-    a = (obj['ans'][yes:yes+3])
-    quiz = Quiz()
+    def cse():
+        global obj,q,options,a
+        phyB.destroy()
+        eceB.destroy()
+        matB.destroy()
+        cseB.destroy()
+        yes = random.randint(0,7)
+        with open(r'Modules\cse.json') as f:
+            obj = json.load(f)
+        q = (obj['ques'][yes:yes+3])
+        options = (obj['options'][yes:yes+3])
+        a = (obj['ans'][yes:yes+3])
+        quiz = Quiz()
 
-cseB = Button(root,text = 'CSE',command = cse, padx = 25, bg = 'black', fg = 'white')
-cseB.pack()    
-phyB = Button(root,text = 'PHY',command = phy, padx = 25, bg = 'black', fg = 'white')
-phyB.pack()
-eceB = Button(root,text = 'ECE',command = ece, padx = 25, bg = 'black', fg = 'white')
-eceB.pack()
-matB = Button(root,text = 'MAT',command = mat, padx = 25, bg = 'black', fg = 'white')
-matB.pack()
+    def phy():
+        global obj,q,options,a
+        phyB.destroy()
+        eceB.destroy()
+        matB.destroy()
+        cseB.destroy()
+        with open(r'Modules\phy.json') as f:
+            obj = json.load(f)
+        q = (obj['ques'])
+        options = (obj['options'])
+        a = (obj['ans'])
+        quiz = Quiz()
 
-root.mainloop()
+    cseB = Button(root,text = 'CSE',command = cse, padx = 25, bg = 'black', fg = 'white')
+    cseB.pack()    
+    phyB = Button(root,text = 'PHY',command = phy, padx = 25, bg = 'black', fg = 'white')
+    phyB.pack()
+    eceB = Button(root,text = 'ECE',command = ece, padx = 25, bg = 'black', fg = 'white')
+    eceB.pack()
+    matB = Button(root,text = 'MAT',command = mat, padx = 25, bg = 'black', fg = 'white')
+    matB.pack()
+
+    root.mainloop()

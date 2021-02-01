@@ -1,6 +1,6 @@
 from tkinter import *
 from PIL import ImageTk,Image
-import Modules.calculator as calc
+import Modules.quiz as qu
 import Modules.notes as n
 import Modules.academic as aca
 import Modules.books as b
@@ -29,7 +29,7 @@ def academic():
     aca.academic(root)
 
 def calculator():
-    calc.call()
+    qu.call(root)
 
 def misc():
     home()
@@ -64,7 +64,7 @@ booksnotes = Button(Top,text="Books",padx=10,pady=10,fg="white",bg="#1d2125",bor
 videosnotes = Button(Top,text="Videos",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1,command=videos)
 miscnotes = Button(Top,text="Misc",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1,command=misc)
 notesnotes = Button(Top,text="Notes",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1,command= note)
-calculatornotes = Button(Top,text="Calculator",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1,command= calculator)
+quiznotes = Button(Top,text="Practice Quiz",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1,command= calculator)
 Academic = Button(Top,text="Academic",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1,command= academic)
 
 homebutton.grid(row=0,column=0)
@@ -72,7 +72,7 @@ booksnotes.grid(row=0,column=2)
 videosnotes.grid(row=0,column=8)
 miscnotes.grid(row=0,column=12)
 notesnotes.grid(row=0,column=4)
-calculatornotes.grid(row=0,column=10)
+quiznotes.grid(row=0,column=10)
 Academic.grid(row=0,column=6)
 
 j=1
