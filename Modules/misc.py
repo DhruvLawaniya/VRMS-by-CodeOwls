@@ -5,7 +5,7 @@ import json
 import random
 import Modules.calculator as calc
 import Modules.weather as wea
-import Modules.snake as sna
+import Modules.ttt as sna
 
 
 def calcu(root):
