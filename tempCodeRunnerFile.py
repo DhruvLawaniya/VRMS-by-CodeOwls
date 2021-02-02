@@ -1,1 +1,1 @@
-root.configure(bg="#24292e")
+from PIL import ImageTk,Image
