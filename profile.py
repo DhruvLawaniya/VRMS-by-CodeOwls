@@ -3,38 +3,62 @@ from PIL import ImageTk,Image
 
 import Modules.main2 as ma
 root = Tk()
-root.title("Learning Management System By Code Owls")
+root.title("VRMS")
 root.configure(bg="#24292e")
-root.geometry("500x500")
+root.geometry("180x300")
 ProfileMain=Label(root)
 def check() :
     us=u.get()
     pas=p.get()
-    us1="ass"
-    ps1="ass"
+    us1="Admin"
+    ps1="Admin"
+    us2="Dhruv"
+    ps2="Dhruv"
+    us3="Rahul"
+    ps3="Rahul"
+    us4="Alan"
+    ps4="Alan"
+    us5="Adwit"
+    ps5="Adwit"
     txt="Invalid Credentials"
     if(us==us1):
         if(pas==ps1):
             txt="Autorized"
-            ma.call()
+            msg=Label(root,text=txt)
+            msg.grid(row=3,column=0)
+            ma.call(us1)
+    elif(us==us2):
+        if(pas==ps2):
+            txt="Autorized"
+            msg=Label(root,text=txt)
+            msg.grid(row=3,column=0)
+            ma.call(us2)
         else:
             txt="Invalid Credentials"
-    elif(us==us1):
-        if(pas==ps1):
+    elif(us==us3):
+        if(pas==ps3):
             txt="Autorized"
-        else:
-            txt="Invalid Credentials"
-    elif(us==us1):
-        if(pas==ps1):
+            msg=Label(root,text=txt)
+            msg.grid(row=3,column=0)
+            ma.call(us3)
+        
+    elif(us==us4):
+        if(pas==ps4):
             txt="Autorized"
-        else:
-            txt="Invalid Credentials"
-    elif(us==us1):
-        if(pas==ps1):
-            txt="Autorized"
+            msg=Label(root,text=txt)
+            msg.grid(row=3,column=0)
+            ma.call(us4)
 
-        else:
-            txt="Invalid Credentials"
+        
+    elif(us==us5):
+        if(pas==ps5):
+            txt="Autorized"
+            msg=Label(root,text=txt)
+            msg.grid(row=3,column=0)
+            ma.call(us5)
+            
+
+        
     msg=Label(root,text=txt)
     msg.grid(row=3,column=0)
 #Logo

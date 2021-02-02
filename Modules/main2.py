@@ -7,7 +7,7 @@ import Modules.books as b
 import Modules.videos as v
 import Modules.misc as m
 
-def call():
+def call(str):
     global root
     root = Toplevel()
     root.title("Learning Management System By Code Owls")
@@ -66,6 +66,7 @@ def call():
     notesnotes = Button(Top,text="Notes",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1,command= note)
     quiznotes = Button(Top,text="Practice Quiz",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1,command= quiz)
     Academic = Button(Top,text="Academic",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1,command= academic)
+    welcome = Label(Top,text=("Welcome,"+str),padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1)
 
     #Postion of Buttons
     homebutton.grid(row=0,column=0)
@@ -75,10 +76,11 @@ def call():
     notesnotes.grid(row=0,column=4)
     quiznotes.grid(row=0,column=10)
     Academic.grid(row=0,column=6)
+    welcome.grid(row=0,column=18)
 
     #Blank spaces
     blank = []
-    for i in range(12):
+    for i in range(18):
         blank.append(Label(MainLeft, text=" Trying to make it long ",fg="#24292e",bg="#24292e"))
         blank[i].grid(row = i, column=1)
     j=1
