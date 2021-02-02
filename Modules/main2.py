@@ -8,7 +8,8 @@ import Modules.videos as v
 import Modules.misc as m
 
 def call():
-    root = Tk()
+    global root
+    root = Toplevel()
     root.title("Learning Management System By Code Owls")
     root.configure(bg="#24292e")
     root.geometry("900x500")

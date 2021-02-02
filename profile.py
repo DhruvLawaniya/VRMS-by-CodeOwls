@@ -10,8 +10,8 @@ ProfileMain=Label(root)
 def check() :
     us=u.get()
     pas=p.get()
-    us1="Admin"
-    ps1="abc123"
+    us1="ass"
+    ps1="ass"
     txt="Invalid Credentials"
     if(us==us1):
         if(pas==ps1):

@@ -124,3 +124,4 @@ def phy():
     options = (obj['options'])
     a = (obj['ans'])
     quiz = Quiz()
+    
