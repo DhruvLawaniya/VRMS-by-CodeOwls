@@ -54,9 +54,9 @@ def call():
     MainLeft.grid(row = 3, column = 0,rowspan=10,padx=10)
 
     #Logo
-    #logo=ImageTk.PhotoImage(Image.open ("images\codeowls.png"),width=10, height =50)
-    #main = Label(Main,image=logo,borderwidth="0")
-    #main.grid(row=0,column=0)
+    logo=ImageTk.PhotoImage(Image.open ("images\codeowls.png"),width=10, height =50)
+    main = Label(Main,image=logo,borderwidth="0")
+    main.grid(row=0,column=0)
 
     #Buttons
     homebutton = Button(Top,text="HOME",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1,command=home)
