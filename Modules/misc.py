@@ -5,8 +5,8 @@ import json
 import random
 import Modules.calculator as calc
 import Modules.weather as wea
-import Modules.ttt as sna
-
+import Modules.ttt as tt
+import Modules.colour as col
 
 def calcu(root):
     calc.call()
@@ -15,7 +15,10 @@ def we(root):
     wea.call()
 
 def snake():
-    sna.call()
+    tt.call()
+def colours():
+    col.call()
+
 
 
 def notesmain(root):
@@ -24,16 +27,17 @@ def notesmain(root):
 
     Calcnotes = Button(LeftFrame,text="Calculator",padx=10,pady=10,fg="white",bg="#24292e",borderwidth=0,command=lambda:calcu(root))
     Weathernotes = Button(LeftFrame,text="Weather",padx=10,pady=10,fg="white",bg="#24292e",borderwidth=0,command=lambda:we(root))
-    Snake = Button(LeftFrame,text="Tic-Tac-Toe",padx=10,pady=10,fg="white",bg="#24292e",borderwidth=0,command=snake)
-
+    tic = Button(LeftFrame,text="Tic-Tac-Toe",padx=10,pady=10,fg="white",bg="#24292e",borderwidth=0,command=snake)
+    colour = Button(LeftFrame,text="Colour",padx=10,pady=10,fg="white",bg="#24292e",borderwidth=0,command=colours)
     Calcnotes.grid(row = 0, column = 1)
     Weathernotes.grid(row = 2, column = 1)
-    Snake.grid(row = 4, column = 1)
+    tic.grid(row = 4, column = 1)
+    colour.grid(row = 6, column = 1)
  
     #blank
     blank = []
     j = 1
-    for i in range(2):
+    for i in range(6):
         blank.append(Label(LeftFrame, text=" Trying to make it long ",fg="#24292e",bg="#24292e"))
         blank[i].grid(row = j, column=1)
         j += 2

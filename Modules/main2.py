@@ -7,6 +7,7 @@ import Modules.books as b
 import Modules.videos as v
 import Modules.misc as m
 
+
 def call(str):
     global root
     root = Toplevel()
