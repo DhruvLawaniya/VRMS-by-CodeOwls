@@ -2,6 +2,7 @@ from tkinter import *
 from PIL import ImageTk,Image
 import webbrowser
 
+#Functions for all the drive links.
 def csenote():
     webbrowser.open("https://drive.google.com/drive/folders/1WjknjKJ81ajNQZpb7tKUy5ohMxGJWz30")
     return 0
@@ -36,60 +37,55 @@ def phytut():
 
 def phys(root):
     pdf_logo=ImageTk.PhotoImage(Image.open (r"images\pdf.png"),width=10, height =50)
-    nb=ImageTk.PhotoImage(Image.open (r"images\notebook.png"),width=10, height =50)
+    phy_img=ImageTk.PhotoImage(Image.open (r"images\notebook.png"),width=10, height =50)
 
-    Phyframe = LabelFrame(root, padx=80,pady=75,bg="#455954",width=200,height=200)
-    Phyframe.grid(row = 3, column = 2,columnspan = 10,rowspan = 15, padx=5,pady=5)
+    phy_frame = LabelFrame(root, padx=80,pady=75,bg="#455954",width=200,height=200)
+    phy_frame.grid(row = 3, column = 2,columnspan = 10,rowspan = 15, padx=5,pady=5)
 
+    phy_notes=Button(phy_frame,text="Physics Notes", image = phy_img, compound="top",padx=50,bg="#455954",borderwidth=0,fg="#dfdbd8",command=phynote)
+    phy_notes.grid(row=0,column=5,padx=10,columnspan=5,pady=30)
+    phy_notes.image=phy_img
 
-    phynotes=Button(Phyframe,text="Physics Notes", image = nb, compound="top",padx=50,bg="#455954",borderwidth=0,fg="#dfdbd8",command=phynote)
-    phynotes.grid(row=0,column=5,padx=10,columnspan=5,pady=30)
-    phynotes.image=nb
+    phy_tut=Button(phy_frame,text="Physics Tutorials", image = pdf_logo, compound="top",padx=50,bg="#455954",fg="#dfdbd8",borderwidth=0,command=phytut)
+    phy_tut.grid(row=0,column=10,padx=10,columnspan=5,pady=30)
+    phy_tut.image=pdf_logo
 
-    phytutorials=Button(Phyframe,text="Physics Tutorials", image = pdf_logo, compound="top",padx=50,bg="#455954",fg="#dfdbd8",borderwidth=0,command=phytut)
-    phytutorials.grid(row=0,column=10,padx=10,columnspan=5,pady=30)
-    phytutorials.image=pdf_logo
-
-    Phyframe.lift()
-
+    phy_frame.lift()
     return 0
 
 def eece(root):
     pdf_logo=ImageTk.PhotoImage(Image.open (r"images\pdf.png"),width=10, height =50)
-    nb=ImageTk.PhotoImage(Image.open (r"images\notebook.png"),width=10, height =50)
-
-  
+    eece_img=ImageTk.PhotoImage(Image.open (r"images\notebook.png"),width=10, height =50)
 
     eece_frame = LabelFrame(root, padx=80,pady=75,bg="#455954",width=200,height=200)
     eece_frame.grid(row = 3, column = 2,columnspan = 10,rowspan = 15, padx=5,pady=5)
     
-    eecenotes=Button(eece_frame,text="EECE Notes", image = nb, compound="top",padx=50,bg="#455954",fg="#dfdbd8",borderwidth=0,command=eecenote)
-    eecenotes.grid(row=0,column=5,padx=17,columnspan=5,pady=31)
-    eecenotes.image=nb
+    eece_notes=Button(eece_frame,text="EECE Notes", image = eece_img, compound="top",padx=50,bg="#455954",fg="#dfdbd8",borderwidth=0,command=eecenote)
+    eece_notes.grid(row=0,column=5,padx=17,columnspan=5,pady=31)
+    eece_notes.image=eece_img
 
-    eecetutorials=Button(eece_frame,text="EECE Tutorials", image = pdf_logo, compound="top",padx=50,bg="#455954",fg="#dfdbd8",borderwidth=0,command=eecetut)
-    eecetutorials.grid(row=0,column=10,padx=17,columnspan=5,pady=31)
-    eecetutorials.image=pdf_logo
+    eece_tut=Button(eece_frame,text="EECE Tutorials", image = pdf_logo, compound="top",padx=50,bg="#455954",fg="#dfdbd8",borderwidth=0,command=eecetut)
+    eece_tut.grid(row=0,column=10,padx=17,columnspan=5,pady=31)
+    eece_tut.image=pdf_logo
 
     eece_frame.lift()
     return 0
 
 def cse(root):
     pdf_logo=ImageTk.PhotoImage(Image.open (r"images\pdf.png"),width=10, height =50)
-    nb=ImageTk.PhotoImage(Image.open (r"images\notebook.png"),width=10, height =50)
+    cse_img=ImageTk.PhotoImage(Image.open (r"images\notebook.png"),width=10, height =50)
 
-   
-    CSE_frame = LabelFrame(root, padx=80,pady=75,bg="#455954",width=200,height=200)
-    CSE_frame.grid(row = 3, column = 2,columnspan = 10,rowspan = 15, padx=5,pady=5)
+    cse_frame = LabelFrame(root, padx=80,pady=75,bg="#455954",width=200,height=200)
+    cse_frame.grid(row = 3, column = 2,columnspan = 10,rowspan = 15, padx=5,pady=5)
     
 
-    CSEnotes=Button(CSE_frame, text="Computer Notes", image = nb, compound="top",padx=50, bg="#455954",fg="#dfdbd8",borderwidth=0,command=csenote)
-    CSEnotes.grid(row=0,column=5,columnspan=5,pady=31,padx=3)
-    CSEnotes.image=nb
+    cse_notes=Button(cse_frame, text="Computer Notes", image = cse_img, compound="top",padx=50, bg="#455954",fg="#dfdbd8",borderwidth=0,command=csenote)
+    cse_notes.grid(row=0,column=5,columnspan=5,pady=31,padx=3)
+    cse_notes.image=cse_img
 
-    CSEtutorials=Button(CSE_frame,text="Computer Tutorials", image = pdf_logo, compound="top",padx=50,bg="#455954",fg="#dfdbd8",borderwidth=0,command=csetut)
-    CSEtutorials.grid(row=0,column=10,pady=31,columnspan=5,padx=3)
-    CSEtutorials.image=pdf_logo
+    cse_tut=Button(cse_frame,text="Computer Tutorials", image = pdf_logo, compound="top",padx=50,bg="#455954",fg="#dfdbd8",borderwidth=0,command=csetut)
+    cse_tut.grid(row=0,column=10,pady=31,columnspan=5,padx=3)
+    cse_tut.image=pdf_logo
     return 0
 
 def math(root):
@@ -99,37 +95,36 @@ def math(root):
     mat_frame = LabelFrame(root, padx=80,pady=75,bg="#455954",width=200,height=200)
     mat_frame.grid(row = 3, column = 2,columnspan = 10,rowspan = 15, padx=5,pady=5)
 
-    matnotes=Button(mat_frame,text="Math Notes", image = nb, compound="top",padx=50,bg="#455954",fg="#dfdbd8",borderwidth=0,command=mathnote)
-    matnotes.grid(row=0,column=5,padx=16,pady=31,columnspan=5)
-    matnotes.image=nb
+    mat_notes=Button(mat_frame,text="Math Notes", image = nb, compound="top",padx=50,bg="#455954",fg="#dfdbd8",borderwidth=0,command=mathnote)
+    mat_notes.grid(row=0,column=5,padx=16,pady=31,columnspan=5)
+    mat_notes.image=nb
 
-    mattutorials=Button(mat_frame,text="Math Tutorials", image = pdf_logo, compound="top",padx=50,bg="#455954",fg="#dfdbd8",borderwidth=0,command=mathtut)
-    mattutorials.grid(row=0,column=10,padx=16,columnspan=5,pady=31)
-    mattutorials.image=pdf_logo
-    
+    mat_tut=Button(mat_frame,text="Math Tutorials", image = pdf_logo, compound="top",padx=50,bg="#455954",fg="#dfdbd8",borderwidth=0,command=mathtut)
+    mat_tut.grid(row=0,column=10,padx=16,columnspan=5,pady=31)
+    mat_tut.image=pdf_logo
 
     return 0
 
 def notesmain(root):
-    LeftFrame = LabelFrame(root,bg="#24292e",pady=28,borderwidth=0)
-    LeftFrame.grid(row = 3, column = 0,rowspan=10,padx=10)
+    left_frame = LabelFrame(root,bg="#24292e",pady=28,borderwidth=0)
+    left_frame.grid(row = 3, column = 0,rowspan=10,padx=10)
 
-    Phynotes = Button(LeftFrame,text="EPHY",padx=10,pady=10,fg="white",bg="#24292e",borderwidth=0,command=lambda:phys(root))
-    CSEnotes = Button(LeftFrame,text="ECSE",padx=10,pady=10,fg="white",bg="#24292e",borderwidth=0,command=lambda:cse(root))
-    EECEnotes = Button(LeftFrame,text="EECE",padx=10,pady=10,fg="white",bg="#24292e",borderwidth=0,command =lambda:eece(root))
-    EMATnotes = Button(LeftFrame,text="EMAT",padx=10,pady=10,fg="white",bg="#24292e",borderwidth=0,command = lambda:math(root))
+    PhyNotes = Button(left_frame,text="EPHY",padx=10,pady=10,fg="white",bg="#24292e",borderwidth=0,command=lambda:phys(root))
+    CseNotes = Button(left_frame,text="ECSE",padx=10,pady=10,fg="white",bg="#24292e",borderwidth=0,command=lambda:cse(root))
+    EeceNotes = Button(left_frame,text="EECE",padx=10,pady=10,fg="white",bg="#24292e",borderwidth=0,command =lambda:eece(root))
+    MathNotes = Button(left_frame,text="EMAT",padx=10,pady=10,fg="white",bg="#24292e",borderwidth=0,command = lambda:math(root))
 
-    Phynotes.grid(row = 0, column = 1)
-    CSEnotes.grid(row = 2, column = 1)
-    EECEnotes.grid(row = 4, column = 1)
-    EMATnotes.grid(row = 6, column = 1)
+    PhyNotes.grid(row = 0, column = 1)
+    CseNotes.grid(row = 2, column = 1)
+    EeceNotes.grid(row = 4, column = 1)
+    MathNotes.grid(row = 6, column = 1)
  
-    #blank
+    #Adding blank spaces.
     blank = []
     j = 1
     for i in range(4):
-        blank.append(Label(LeftFrame, text=" Trying to make it long ",fg="#24292e",bg="#24292e"))
+        blank.append(Label(left_frame, text=" Trying to make it long ",fg="#24292e",bg="#24292e"))
         blank[i].grid(row = j, column=1)
         j += 2
 
-    LeftFrame.lift()
+    left_frame.lift()
