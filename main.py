@@ -1,6 +1,6 @@
 from tkinter import *
 from PIL import ImageTk,Image
-import Modules.quiz as qu
+import Modules.quizframe as qu
 import Modules.notes as n
 import Modules.academic as aca
 import Modules.books as b
@@ -30,7 +30,8 @@ def academic():
     aca.academic(root)
 
 def quiz():
-    qu.call(root)
+    home()
+    qu.notesmain(root)
 
 def misc():
     home()
