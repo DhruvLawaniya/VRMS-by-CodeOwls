@@ -12,6 +12,7 @@ root.title("Learning Management System By Code Owls")
 root.configure(bg="#24292e")
 root.geometry("900x500")
 
+#Functions
 def home():
     Main.lift()
     MainLeft.lift()
@@ -39,6 +40,7 @@ def note():
     home()
     n.notesmain(root)
 
+#Frames
 Top = LabelFrame(root,bg = "#24292e",width=200,height=10,borderwidth=0)
 Top.grid(row = 0, column=0,columnspan=7,padx=10,pady=20)
 
@@ -48,17 +50,12 @@ Main.grid(row = 3, column = 2,columnspan = 10,rowspan = 10, padx=5,pady=5)
 MainLeft = LabelFrame(root,bg="#24292e",pady=28,borderwidth=0)
 MainLeft.grid(row = 3, column = 0,rowspan=10,padx=10)
 
-logo=ImageTk.PhotoImage(Image.open (r"images\redbull.png"),width=10, height =50)
+#Logo
+logo=ImageTk.PhotoImage(Image.open (r"images\codeowls.png"),width=10, height =50)
 main = Label(Main,image=logo,borderwidth="0")
 main.grid(row=0,column=0)
 
-blank = []
-for i in range(12):
-    blank.append(Label(MainLeft, text=" Trying to make it long ",fg="#24292e",bg="#24292e"))
-    blank[i].grid(row = i, column=1)
-
-#Basic Label
-
+#Buttons
 homebutton = Button(Top,text="HOME",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1,command=home)
 booksnotes = Button(Top,text="Books",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1, command=books)
 videosnotes = Button(Top,text="Videos",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1,command=videos)
@@ -67,6 +64,7 @@ notesnotes = Button(Top,text="Notes",padx=10,pady=10,fg="white",bg="#1d2125",bor
 quiznotes = Button(Top,text="Practice Quiz",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1,command= quiz)
 Academic = Button(Top,text="Academic",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1,command= academic)
 
+#Postion of Buttons
 homebutton.grid(row=0,column=0)
 booksnotes.grid(row=0,column=2)
 videosnotes.grid(row=0,column=8)
@@ -75,6 +73,11 @@ notesnotes.grid(row=0,column=4)
 quiznotes.grid(row=0,column=10)
 Academic.grid(row=0,column=6)
 
+#Blank spaces
+blank = []
+for i in range(12):
+    blank.append(Label(MainLeft, text=" Trying to make it long ",fg="#24292e",bg="#24292e"))
+    blank[i].grid(row = i, column=1)
 j=1
 blanktop = []
 for i in range(6):

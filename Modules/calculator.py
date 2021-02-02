@@ -1,4 +1,5 @@
 from tkinter import *
+
 def call() :	
 	root = Tk()
 	root.title("Simple Calculator")
