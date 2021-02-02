@@ -28,7 +28,7 @@ def academic():
     home()
     aca.academic(root)
 
-def calculator():
+def quiz():
     qu.call(root)
 
 def misc():
@@ -64,7 +64,7 @@ booksnotes = Button(Top,text="Books",padx=10,pady=10,fg="white",bg="#1d2125",bor
 videosnotes = Button(Top,text="Videos",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1,command=videos)
 miscnotes = Button(Top,text="Misc",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1,command=misc)
 notesnotes = Button(Top,text="Notes",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1,command= note)
-quiznotes = Button(Top,text="Practice Quiz",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1,command= calculator)
+quiznotes = Button(Top,text="Practice Quiz",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1,command= quiz)
 Academic = Button(Top,text="Academic",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1,command= academic)
 
 homebutton.grid(row=0,column=0)
