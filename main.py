@@ -43,10 +43,10 @@ def note():
 
 #Frames
 Top = LabelFrame(root,bg = "#24292e",width=200,height=10,borderwidth=0)
-Top.grid(row = 0, column=0,columnspan=7,padx=10,pady=20)
+Top.grid(row = 0, column=0,columnspan=10,padx=10,pady=20)
 
 Main = LabelFrame(root, padx=200,pady=20,bg="#1d2125",width=200,height=200)
-Main.grid(row = 3, column = 2,columnspan = 10,rowspan = 10, padx=5,pady=5)
+Main.grid(row = 3, column = 2,columnspan = 10,rowspan = 10, padx=20,pady=5)
 
 MainLeft = LabelFrame(root,bg="#24292e",pady=28,borderwidth=0)
 MainLeft.grid(row = 3, column = 0,rowspan=10,padx=10)
