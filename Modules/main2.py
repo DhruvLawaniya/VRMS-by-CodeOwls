@@ -63,7 +63,7 @@ def call(str):
     homebutton = Button(Top,text="HOME",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1,command=home)
     booksnotes = Button(Top,text="Books",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1, command=books)
     videosnotes = Button(Top,text="Videos",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1,command=videos)
-    miscnotes = Button(Top,text="Miscellaneous",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1,command=misc)
+    miscnotes = Button(Top,text="Mind Fresh",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1,command=misc)
     notesnotes = Button(Top,text="Notes",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1,command= note)
     quiznotes = Button(Top,text="Practice Quiz",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1,command= quiz)
     Academic = Button(Top,text="Academic",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1,command= academic)
@@ -77,7 +77,7 @@ def call(str):
     notesnotes.grid(row=0,column=4)
     quiznotes.grid(row=0,column=10)
     Academic.grid(row=0,column=6)
-    welcome.grid(row=0,column=18)
+    #welcome.grid(row=0,column=18)
 
     #Blank spaces
     blank = []

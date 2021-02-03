@@ -9,7 +9,7 @@ def call() :
     size_of_board = 600
     rows = 10
     cols = 10
-    DELAY = 100
+    DELAY = 150
     snake_initial_length = 3
     symbol_size = (size_of_board / 3 - size_of_board / 8) / 2
     symbol_thickness = 2
