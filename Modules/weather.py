@@ -57,8 +57,6 @@ def call():
         # Adding the received info into the screen 
         lable_temp.configure(text=current_temprature) 
         lable_humidity.configure(text=humidity) 
-        max_temp.configure(text=tempmax) 
-        min_temp.configure(text=tempmin)  
         lable_country.configure(text=country) 
         lable_citi.configure(text=citi) 
     
@@ -87,20 +85,6 @@ def call():
     
     lable_humidity = Label(root, text="...", width=0,bg='#24292e', fg='white',font=("bold", 15)) 
     lable_humidity.place(x=107, y=400) 
-    
-    
-    maxi = Label(root, text="Max. Temp.: ", width=0,bg='#24292e',fg='white', font=("bold", 15)) 
-    maxi.place(x=3, y=430) 
-    
-    max_temp = Label(root, text="...", width=0, bg='#24292e',fg='white', font=("bold", 15)) 
-    max_temp.place(x=128, y=430) 
-    
-    
-    mini = Label(root, text="Min. Temp.: ", width=0,fg='white',  bg='#24292e', font=("bold", 15)) 
-    mini.place(x=3, y=460) 
-    
-    min_temp = Label(root, text="...", width=0,bg='#24292e', fg='white',font=("bold", 15)) 
-    min_temp.place(x=128, y=460) 
     
     root.mainloop()
 #hello test commit\
