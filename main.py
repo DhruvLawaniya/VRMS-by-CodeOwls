@@ -5,7 +5,7 @@ import Modules.notes as n
 import Modules.academic as aca
 import Modules.books as b
 import Modules.videos as v
-import Modules.misc as m
+#import Modules.misc as m
 
 root = Tk()
 root.title("Learning Management System By Code Owls")
