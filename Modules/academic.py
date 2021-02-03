@@ -9,7 +9,7 @@ def academic(root) :
        def openwebbook1():
          webbrowser.open(urlbook1,new)
        new=1
-       ttFrame = LabelFrame(root, padx=80,pady=75,bg="#455954",width=200,height=200)
+       ttFrame = LabelFrame(root, padx=244,pady=75,bg="#455954",width=200,height=200)
        ttFrame.grid(row = 3, column = 2,columnspan = 10,rowspan = 15, padx=5,pady=5) 
        #list ece books and setup their info here itself
        urlbook1 = "https://icampus.bennett.edu.in/#/home/v1/stimetable"
@@ -23,7 +23,7 @@ def academic(root) :
        def openwebbook1():
          webbrowser.open(urlbook1,new)
        new=1
-       BFrame_Right = LabelFrame(root, padx=80,pady=75,bg="#344e5c",width=200,height=200)
+       BFrame_Right = LabelFrame(root, padx=265,pady=105,bg="#344e5c",width=200,height=200)
        BFrame_Right.grid(row = 3, column = 2,columnspan = 10,rowspan = 15, padx=5,pady=5)
        #list ece books and setup their info here itself
        urlbook1 = "https://icampus.bennett.edu.in/#/home/wm/sstudentmarks"
@@ -36,7 +36,7 @@ def academic(root) :
        def openwebbook1():
          webbrowser.open(urlbook1,new)
        new=1
-       BFrame_Right = LabelFrame(root, padx=80,pady=75,bg="#344e5c",width=200,height=200)
+       BFrame_Right = LabelFrame(root, padx=245,pady=106,bg="#344e5c",width=200,height=200)
        BFrame_Right.grid(row = 3, column = 2,columnspan = 10,rowspan = 15, padx=5,pady=5)  
        #list ece books and setup their info here itself
        urlbook1 = "https://icampus.bennett.edu.in/#/home/v3/feepayment"
@@ -49,7 +49,7 @@ def academic(root) :
        def openwebbook1():
          webbrowser.open(urlbook1,new)
        new=1
-       BFrame_Right = LabelFrame(root, padx=80,pady=75,bg="#344e5c",width=200,height=200)
+       BFrame_Right = LabelFrame(root, padx=147,pady=106,bg="#344e5c",width=200,height=200)
        BFrame_Right.grid(row = 3, column = 2,columnspan = 10,rowspan = 15, padx=5,pady=5)  
        #list ece books and setup their info here itself
        urlbook1 = "https://drive.google.com/file/d/1cXpD9mr00kRyqUYqnb-mqBdw5tvvU5CP/view"
