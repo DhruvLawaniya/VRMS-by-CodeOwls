@@ -39,7 +39,7 @@ def phys(root):
     pdf_logo=ImageTk.PhotoImage(Image.open (r"images\pdf.png"),width=10, height =50)
     phy_img=ImageTk.PhotoImage(Image.open (r"images\notebook.png"),width=10, height =50)
 
-    phy_frame = LabelFrame(root, padx=80,pady=75,bg="#455954",width=200,height=200)
+    phy_frame = LabelFrame(root, padx=82,pady=76,bg="#455954",width=200,height=200)
     phy_frame.grid(row = 3, column = 2,columnspan = 10,rowspan = 15, padx=5,pady=5)
 
     phy_notes=Button(phy_frame,text="Physics Notes", image = phy_img, compound="top",padx=50,bg="#455954",borderwidth=0,fg="#dfdbd8",command=phynote)

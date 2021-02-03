@@ -12,7 +12,7 @@ def math_playlist():
     webbrowser.open("https://www.youtube.com/playlist?list=PLygAjP_YxBHv7BhIK0hj2mA7v-zdnlp3d")
 
 def videos(root) :
-    VideoFrame = LabelFrame(root,pady=59,bg="#455954",width=200,height=200,padx=108)
+    VideoFrame = LabelFrame(root,pady=59,bg="#455954",width=200,height=200,padx=110)
     VideoFrame.grid(row = 3, column = 2,columnspan = 10,rowspan = 15, padx=5,pady=5)
 
     yt_logo=ImageTk.PhotoImage(Image.open (r"images\video.png"))
