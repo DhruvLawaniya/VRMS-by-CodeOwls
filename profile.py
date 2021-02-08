@@ -2,6 +2,7 @@ from tkinter import *
 from PIL import ImageTk,Image
 
 import Modules.main2 as ma
+import Modules.register as regi
 root = Tk()
 root.title("VRMS")
 root.configure(bg="#24292e")
@@ -10,8 +11,8 @@ ProfileMain=Label(root)
 def check() :
     us=u.get()
     pas=p.get()
-    us1="Admin"
-    ps1="Admin"
+    us1=""
+    ps1=""
     us2="Dhruv"
     ps2="Dhruv"
     us3="Rahul"
@@ -61,14 +62,21 @@ def check() :
         
     msg=Label(root,text=txt)
     msg.grid(row=3,column=0)
+
+def rn():
+    regi.call()
 #Logo
 logo=ImageTk.PhotoImage(Image.open ("images\codeowls.png"),width=10, height =50)
 main = Label(root,image=logo,borderwidth="0")
 main.grid(row=5,column=0)
+
 u=Entry(root,text="Enter Username")
 p=Entry(root,text="Enter Password",show="*")
 l=Button(root,text="Login",command=check)
+rn= Button(root,text="Register Now", command=rn)
+
 u.grid(row=0,column=0)
 p.grid(row=1,column=0)
 l.grid(row=2,column=0)
+rn.grid(row=3,column=0)
 root.mainloop()

@@ -13,3 +13,5 @@ Modules/__pycache__/snake.cpython-38.pyc
 Modules/__pycache__/ttt.cpython-38.pyc
 Modules/__pycache__/videos.cpython-38.pyc
 Modules/__pycache__/weather.cpython-38.pyc
+*.pyc
+*.pyc
