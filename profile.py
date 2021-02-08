@@ -5,6 +5,7 @@ import Modules.main2 as ma
 import Modules.register as regi
 root = Tk()
 root.title("VRMS")
+root.iconbitmap("images\codeowls.png")
 root.configure(bg="#24292e")
 root.geometry("180x300")
 ProfileMain=Label(root)
