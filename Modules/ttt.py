@@ -6,7 +6,6 @@ def call():
     root.geometry("300x500")
     root.title("TIC TAC TOE")
     root.configure(bg="#24292e")
-
     head = Label(root,text="TIC-TAC-TOE",fg="white",bg="#1d2125",font=("Arial",20,"italic"))
     head.pack()
 

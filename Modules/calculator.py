@@ -4,6 +4,7 @@ def call() :
 	root = Tk()
 	root.title("Simple Calculator")
 	root.configure(bg="#24292e")
+	root.iconbitmap("images\mainlogo.ico")
 	e = Entry(root, width=35, borderwidth=5)
 	e.grid(row=0, column=0, columnspan=3, padx=10, pady=10)
 
