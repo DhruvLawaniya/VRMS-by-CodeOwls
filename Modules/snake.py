@@ -4,6 +4,7 @@ import time
 import numpy as np
 from PIL import ImageTk,Image
 
+
 def call() :
 # Define useful parameters
     size_of_board = 600
