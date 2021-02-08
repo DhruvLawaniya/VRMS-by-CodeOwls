@@ -8,7 +8,8 @@ def call():
     # necessary details 
     root = Tk() 
     root.title("Weather App") 
-    root.geometry("400x500") 
+    root.geometry("400x500")
+    root.iconbitmap('images\mainlogo.ico') 
     root['background'] = "#24292e"
     
     # Dates 
