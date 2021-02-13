@@ -52,4 +52,3 @@ def check(username,pasw):
     else:
         f.close()
         return -1
-     

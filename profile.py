@@ -1,17 +1,16 @@
 from tkinter import *
 from PIL import ImageTk,Image
 from tkinter import messagebox
-
 import Modules.main2 as ma
 import Modules.register as regi
 import Modules.forget as fg
+
 root = Tk()
 root.title("VRMS")
 root.iconbitmap("images\mainlogo.ico")
 root.configure(bg="#24292e")
 root.geometry("600x400")
 ProfileMain=Label(root)
-
 
 def registerfn():
     username = regi_user.get()
@@ -49,13 +48,14 @@ def check() :
         root.destroy()
         ma.call()
     else:
-        msg = Label(root,text="Invalid Credentials")
-        msg.grid(row=4,column=0)
+        msg = Label(root,text="Invalid Credentials",padx=10,pady=10,fg="white",bg="#24292e",borderwidth=0)
+        msg.grid(row=6,column=0)
 
 def rn():
     regi.call()
 def fp ():
     fg.call()
+
 #Logo
 logo=ImageTk.PhotoImage(Image.open ("images\codeowls.png"),width=10, height =50)
 main = Label(root,image=logo,borderwidth="0")
@@ -74,7 +74,6 @@ loginuser.grid(row=3,column=0)
 loginpass.grid(row=5,column=0)
 login.grid(row=7,column=0)
 fp.grid(row=10,column=0)
-
 
 #Registration Labels, Buttons and  grid
 registration= Label(root,text="SIGN UP",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1)
