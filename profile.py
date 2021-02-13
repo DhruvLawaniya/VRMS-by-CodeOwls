@@ -61,13 +61,16 @@ logo=ImageTk.PhotoImage(Image.open ("images\codeowls.png"),width=10, height =50)
 main = Label(root,image=logo,borderwidth="0")
 
 #Login labels, Buttons and griding
-looogin= Label(root,text="LOGIN",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1)
-loginuser=Entry(root)
+LoginFrame = LabelFrame(root,bg="#24292e",borderwidth=0)
+LoginFrame.grid(row = 0, column = 0)
+
+looogin= Label(LoginFrame,text="LOGIN",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1)
+loginuser=Entry(LoginFrame)
 loginuser.insert(0,"Enter Username") 
-loginpass=Entry(root,text="Enter Password",show="*")
+loginpass=Entry(LoginFrame,text="Enter Password",show="*")
 loginpass.insert(0,"Enter Password")
-login=Button(root,text="Login",padx=10,pady=10,fg="white",bg="#24292e",borderwidth=0,command=check)
-fp= Button(root,text="Forgot Password ?", padx=10,pady=10,fg="white",bg="#24292e",borderwidth=0,command=fp)
+login=Button(LoginFrame,text="Login",padx=10,pady=10,fg="white",bg="#24292e",borderwidth=0,command=check)
+fp= Button(LoginFrame,text="Forgot Password ?", padx=10,pady=10,fg="white",bg="#24292e",borderwidth=0,command=fp)
 
 looogin.grid(row=0,column=0)
 loginuser.grid(row=3,column=0)
@@ -75,17 +78,21 @@ loginpass.grid(row=5,column=0)
 login.grid(row=7,column=0)
 fp.grid(row=10,column=0)
 
+
 #Registration Labels, Buttons and  grid
-registration= Label(root,text="SIGN UP",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1)
-regi_user = Entry(root)
+RegiFrame = LabelFrame(root,bg="#24292e",borderwidth=0)
+RegiFrame.grid(row = 0, column = 5)
+
+registration= Label(RegiFrame,text="SIGN UP",padx=10,pady=10,fg="white",bg="#1d2125",borderwidth=1)
+regi_user = Entry(RegiFrame)
 regi_user.insert(0,"Enter Username") 
-regi_pass = Entry(root)
+regi_pass = Entry(RegiFrame)
 regi_pass.insert(0,"Enter Password")
-regi_passcheck = Entry(root)
+regi_passcheck = Entry(RegiFrame)
 regi_passcheck.insert(0,"Re-Enter Password")
-regi_email = Entry(root)
+regi_email = Entry(RegiFrame)
 regi_email.insert(0,"Enter Mail")
-register = Button(root,text="Register Now",padx=10,pady=10,fg="white",bg="#24292e",borderwidth=0,command=registerfn)
+register = Button(RegiFrame,text="Register Now",padx=10,pady=10,fg="white",bg="#24292e",borderwidth=0,command=registerfn)
 
 registration.grid(row=0,column=5)
 regi_user.grid(row=3,column=5)
@@ -93,5 +100,16 @@ regi_pass.grid(row=6,column=5)
 regi_passcheck.grid(row=7,column=5)
 regi_email.grid(row=8,column=5)
 register.grid(row=11,column=5)
+
+blank = []
+for i in range(6):
+    blank.append(Label(LoginFrame,fg="#24292e",bg="#24292e"))
+    blank[i].grid(row = 0, column=i)
+
+blank = []
+for i in range(6):
+    blank.append(Label(RegiFrame, fg="#24292e",bg="#24292e"))
+    blank[i].grid(row = 0, column=i)
+
 
 root.mainloop()
