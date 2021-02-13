@@ -104,12 +104,12 @@ register.grid(row=11,column=5)
 blank = []
 for i in range(6):
     blank.append(Label(LoginFrame,fg="#24292e",bg="#24292e"))
-    blank[i].grid(row = 0, column=i)
+    blank[i].grid(row = 1, column=i)
 
 blank = []
 for i in range(6):
-    blank.append(Label(RegiFrame, fg="#24292e",bg="#24292e"))
-    blank[i].grid(row = 0, column=i)
+    blank.append(Label(RegiFrame,fg="#24292e",bg="#24292e"))
+    blank[i].grid(row = 1, column=i)
 
 
 root.mainloop()
