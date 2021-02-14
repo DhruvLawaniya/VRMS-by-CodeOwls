@@ -72,18 +72,18 @@ loginpass.insert(0,"Enter Password")
 login=Button(LoginFrame,text="Login",padx=10,pady=10,fg="white",bg="#24292e",borderwidth=0,command=check)
 fp= Button(LoginFrame,text="Forgot Password ?", padx=10,pady=10,fg="white",bg="#24292e",borderwidth=0,command=fp)
 
-looogin.grid(row=0,column=0)
-loginuser.grid(row=3,column=0)
-loginpass.grid(row=5,column=0)
-login.grid(row=7,column=0)
-fp.grid(row=10,column=0)
+looogin.grid(row=0,column=0,pady=5)
+loginuser.grid(row=3,column=0,pady=5)
+loginpass.grid(row=5,column=0,pady=5)
+login.grid(row=7,column=0,pady=5)
+fp.grid(row=10,column=0,pady=5)
 
 
 #Registration Labels, Buttons and  grid
 RegiFrame = LabelFrame(root,bg="#24292e",borderwidth=0)
 RegiFrame.grid(row = 0, column = 5)
 
-registration= Label(RegiFrame,text="SIGN UP",padx=20,pady=10,fg="white",bg="#1d2125",borderwidth=1)
+registration= Label(RegiFrame,text="SIGN UP",fg="white",bg="#1d2125",borderwidth=1)
 regi_user = Entry(RegiFrame)
 regi_user.insert(0,"Enter Username") 
 regi_pass = Entry(RegiFrame,show="*")
