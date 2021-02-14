@@ -95,11 +95,11 @@ regi_email.insert(0,"Enter Mail")
 register = Button(RegiFrame,text="Register Now",padx=10,pady=10,fg="white",bg="#24292e",borderwidth=0,command=registerfn)
 
 registration.grid(row=0,column=5)
-regi_user.grid(row=3,column=5)
-regi_pass.grid(row=6,column=5)
-regi_passcheck.grid(row=7,column=5)
+regi_user.grid(row=2,column=5)
+regi_pass.grid(row=4,column=5)
+regi_passcheck.grid(row=6,column=5)
 regi_email.grid(row=8,column=5)
-register.grid(row=11,column=5)
+register.grid(row=10,column=5)
 
 blank = []
 for i in range(6):
