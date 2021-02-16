@@ -6,7 +6,7 @@ import Modules.register as regi
 
 root = Tk()
 root.title("VRMS")
-root.iconbitmap("images\mainlogo.ico")
+root.iconbitmap("images\inverted.ico")
 root.configure(bg="#24292e")
 root.geometry("550x200")
 ProfileMain=Label(root)
