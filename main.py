@@ -1,7 +1,7 @@
 from tkinter import *
 from PIL import ImageTk,Image
 from tkinter import messagebox
-import Modules.driver as ma
+import driver as ma
 import Modules.register as regi
 
 root = Tk()
