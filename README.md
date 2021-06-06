@@ -8,14 +8,14 @@ Though no one would be able to simulate the physical classes we can try to make 
 
 It also consists of some extra features like some basic games to refresh your mind and take a break, along with some tools like a simple calculator and a weather app.
 <hr>
-## Technologies Used 
+<h2> Technologies Used </h2> 
 <hr>
 * Python-Tkinter <br>
 * Python-Pillow <br>
 * JavaScript <br>
 * SQL <br>
 <hr>
-## Authors
+<h2> Authors </h2>
 <hr>
 * Alan Marc Louis - https://github.com/Louis-Alan <br>
 * Adwit Mittal - https://github.com/AdwitM <br>
