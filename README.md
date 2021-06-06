@@ -10,14 +10,14 @@ It also consists of some extra features like some basic games to refresh your mi
 <hr>
 ## Technologies Used 
 <hr>
-* Python-Tkinter
-* Python-Pillow
-* JavaScript
-* SQL
+* Python-Tkinter <br>
+* Python-Pillow <br>
+* JavaScript <br>
+* SQL <br>
 <hr>
 ## Authors
 <hr>
-* Alan Marc Louis - https://github.com/Louis-Alan
-* Adwit Mittal - https://github.com/AdwitM
-* Dhruv Lawaniya - https://github.com/DhruvLawaniya
-* Rahul Khanna - https://github.com/XLazer4
+* Alan Marc Louis - https://github.com/Louis-Alan <br>
+* Adwit Mittal - https://github.com/AdwitM <br>
+* Dhruv Lawaniya - https://github.com/DhruvLawaniya <br>
+* Rahul Khanna - https://github.com/XLazer4 <br>
