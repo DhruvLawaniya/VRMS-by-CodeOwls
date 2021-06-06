@@ -15,10 +15,11 @@ It also consists of some extra features and integrations like weather notifier a
 * JavaScript <br>
 * SQL <br>
 
-<h2> References </h2>
-* Tkinter - https://docs.python.org/3/library/tk.html <br>
-* OpenWeatherAPI - https://openweathermap.org/current <br>
-* PillowLib - https://pillow.readthedocs.io/en/stable/ <br>
+<h2> References </h2> <ul>
+<li> Tkinter - https://docs.python.org/3/library/tk.html  </li>
+<li> OpenWeatherAPI - https://openweathermap.org/current </li>
+<li> PillowLib - https://pillow.readthedocs.io/en/stable/ </li>
+</ul>
 <h2> Authors </h2>
 
 * Alan Marc Louis - https://github.com/Louis-Alan <br>
