@@ -1,6 +1,6 @@
 # Virtual-Resource-Management-System
 <hr>
-## Abstract
+<h2> Abstract </h2>
 <hr>
 Our project aims to cater to the needs of the students and teachers, who are left largely depended on virtual classroom environments. Managing all the resources which were once physical and could be sorted easily are now a hassle to sort. Students can no longer meet and greet each other as they would have done, had there been no pandemic. Sitting in front of a screen for large durations is not only physically exhausting but has given birth to unprecedented rates of mental health issues. 
 
