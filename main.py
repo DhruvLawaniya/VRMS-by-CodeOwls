@@ -75,8 +75,6 @@ loginpasstxt.grid(row=5,column=0)
 loginpass.grid(row=5,column=2,pady=5)
 login.grid(row=7,column=0,padx=25,columnspan=3)
 
-
-
 #Registration Labels, Buttons and  grid
 RegiFrame = LabelFrame(root,bg="#24292e",borderwidth=0)
 RegiFrame.grid(row = 0, column = 1,padx=30)
@@ -101,7 +99,5 @@ register.grid(row=10,column=1,columnspan=3,pady=10)
 
 blank = Label(LoginFrame,fg="#24292e",bg="#24292e", text="l")
 blank.grid(row = 6, column=0)
-
-
 
 root.mainloop()
